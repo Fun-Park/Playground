@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Old_List_Value__c</fullName>
+    <description>The original field value abbreviated to no more than 255 characters for list view display.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The original field value.</inlineHelpText>
+    <label>Original Value</label>
+    <length>256</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>
