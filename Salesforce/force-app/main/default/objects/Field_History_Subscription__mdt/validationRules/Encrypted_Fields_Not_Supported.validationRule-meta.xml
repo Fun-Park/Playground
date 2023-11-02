@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Encrypted_Fields_Not_Supported</fullName>
+    <active>true</active>
+    <description>Encrypted fields cannot be subscribed to field history.  This is to ensure that the encrypted values are not duplicated.</description>
+    <errorConditionFormula>CONTAINS(Field__r.DataType, &apos;Encrypted&apos;)</errorConditionFormula>
+    <errorDisplayField>Field__c</errorDisplayField>
+    <errorMessage>Encrypted fields cannot be subscribed to field history.</errorMessage>
+</ValidationRule>

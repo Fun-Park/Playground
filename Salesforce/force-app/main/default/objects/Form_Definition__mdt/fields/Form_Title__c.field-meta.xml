@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Form_Title__c</fullName>
+    <description>The title of the form.  This is both used in server error messages and displayed as the title of the form.  The Form Framework &quot;label&quot; attribute will override this value if set.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The title of the form.  This is both used in server error messages and displayed as the title of the form.  The Form Framework &quot;label&quot; attribute will override this value if set.</inlineHelpText>
+    <label>Form Title</label>
+    <length>125</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

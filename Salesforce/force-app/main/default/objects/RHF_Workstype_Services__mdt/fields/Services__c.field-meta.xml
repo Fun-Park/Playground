@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Services__c</fullName>
+    <description>List of services on the RHF registration page</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>List of services on the RHF registration page</inlineHelpText>
+    <label>Services</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Builder - Low Rise</fullName>
+                <default>true</default>
+                <label>Builder - Low Rise</label>
+            </value>
+            <value>
+                <fullName>Builder - Medium Rise</fullName>
+                <default>false</default>
+                <label>Builder - Medium Rise</label>
+            </value>
+            <value>
+                <fullName>Builder - Open</fullName>
+                <default>false</default>
+                <label>Builder - Open</label>
+            </value>
+            <value>
+                <fullName>Building Restricted to Alterations and Additions</fullName>
+                <default>false</default>
+                <label>Building Restricted to Alterations and Additions</label>
+            </value>
+            <value>
+                <fullName>Building Restricted to Building Removal</fullName>
+                <default>false</default>
+                <label>Building Restricted to Building Removal</label>
+            </value>
+            <value>
+                <fullName>Building Restricted to Non Structural Renovations</fullName>
+                <default>false</default>
+                <label>Building Restricted to Non Structural Renovations</label>
+            </value>
+            <value>
+                <fullName>Building Design - Low Rise</fullName>
+                <default>false</default>
+                <label>Building Design - Low Rise</label>
+            </value>
+            <value>
+                <fullName>Building Design - Medium Rise</fullName>
+                <default>false</default>
+                <label>Building Design - Medium Rise</label>
+            </value>
+            <value>
+                <fullName>Building Design - Open</fullName>
+                <default>false</default>
+                <label>Building Design - Open</label>
+            </value>
+            <value>
+                <fullName>Architects</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Architects</label>
+            </value>
+            <value>
+                <fullName>Builder - Project Management Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Builder - Project Management Services</label>
+            </value>
+            <value>
+                <fullName>Builder Restricted to Alteration and Additions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Builder Restricted to Alteration and Additions</label>
+            </value>
+            <value>
+                <fullName>Builder Restricted to Building Removal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Builder Restricted to Building Removal</label>
+            </value>
+            <value>
+                <fullName>Builder Restricted to kitchen, bathroom, and laundry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Builder Restricted to kitchen, bathroom, and laundry</label>
+            </value>
+            <value>
+                <fullName>Builder Restricted to renovation, repairs and maintenance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Builder Restricted to renovation, repairs and maintenance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

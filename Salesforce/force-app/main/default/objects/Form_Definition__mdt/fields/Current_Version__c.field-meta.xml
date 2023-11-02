@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Version__c</fullName>
+    <defaultValue>(1)</defaultValue>
+    <description>The current allowed version of the form.  If a form data record&apos;s version does not match this value, that record will no longer be accessible to the customer.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The current allowed version of the form.  If a form data record&apos;s version does not match this value, that record will no longer be accessible to the customer.</inlineHelpText>
+    <label>Current Version</label>
+    <precision>4</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

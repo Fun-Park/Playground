@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Version_must_be_greater_than_0</fullName>
+    <active>true</active>
+    <description>The Form Definition&apos;s Current Version must be an integer greater than zero.</description>
+    <errorConditionFormula>Current_Version__c &lt; 1</errorConditionFormula>
+    <errorDisplayField>Current_Version__c</errorDisplayField>
+    <errorMessage>The Form Definition&apos;s Current Version must be an integer greater than zero.</errorMessage>
+</ValidationRule>

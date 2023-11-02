@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due_Date_Action__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Due Date Action</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Clear</fullName>
+                    <default>false</default>
+                    <label>Clear</label>
+                </value>
+                <value>
+                    <fullName>Recalculate</fullName>
+                    <default>false</default>
+                    <label>Recalculate</label>
+                </value>
+                <value>
+                    <fullName>Initialize</fullName>
+                    <default>false</default>
+                    <label>Initialize</label>
+                </value>
+                <value>
+                    <fullName>No Change</fullName>
+                    <default>false</default>
+                    <label>No Change</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

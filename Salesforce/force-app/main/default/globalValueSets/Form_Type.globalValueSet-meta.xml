@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>IRU Internal Review Request</fullName>
+        <default>false</default>
+        <label>IRU Internal Review Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Dispute</fullName>
+        <default>false</default>
+        <label>Dispute</label>
+    </customValue>
+    <customValue>
+        <fullName>BCIPA Adjudication Application</fullName>
+        <default>false</default>
+        <label>BCIPA Adjudication Application</label>
+    </customValue>
+    <customValue>
+        <fullName>BCIPA Certificate Request</fullName>
+        <default>false</default>
+        <label>BCIPA Certificate Request</label>
+    </customValue>
+    <customValue>
+        <fullName>BCIPA Complaint</fullName>
+        <default>false</default>
+        <label>BCIPA Complaint</label>
+    </customValue>
+    <customValue>
+        <fullName>BIF Adjudication Application</fullName>
+        <default>false</default>
+        <label>BIF Adjudication Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Create insurance policy</fullName>
+        <default>false</default>
+        <label>Create insurance policy</label>
+    </customValue>
+    <customValue>
+        <fullName>NOOF</fullName>
+        <default>false</default>
+        <label>NOOF</label>
+    </customValue>
+    <customValue>
+        <fullName>Money Owed</fullName>
+        <default>false</default>
+        <label>Money Owed</label>
+    </customValue>
+    <customValue>
+        <fullName>BCIPA COMPLAINTS</fullName>
+        <default>false</default>
+        <label>BCIPA COMPLAINTS</label>
+    </customValue>
+    <customValue>
+        <fullName>Disputes</fullName>
+        <default>false</default>
+        <label>Disputes</label>
+    </customValue>
+    <customValue>
+        <fullName>Non_Completion</fullName>
+        <default>false</default>
+        <label>Non-Completion Claim</label>
+    </customValue>
+    <customValue>
+        <fullName>NOTIFICATION OF OFFENCE</fullName>
+        <default>false</default>
+        <label>NOTIFICATION OF OFFENCE</label>
+    </customValue>
+    <customValue>
+        <fullName>Pool Safety Certificate</fullName>
+        <default>false</default>
+        <label>Pool Safety Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>Policy_Amend</fullName>
+        <default>false</default>
+        <label>Amend Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Policy_Cancel</fullName>
+        <default>false</default>
+        <label>Cancel Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Policy_OAC</fullName>
+        <default>false</default>
+        <label>Optional Additional Cover</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Categories 4-7 (more than $30,000,001)</fullName>
+        <default>false</default>
+        <label>Financial Categories 4-7 (more than $30,000,001)</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Categories 1-3 ($800,001 - $30,000,000)</fullName>
+        <default>false</default>
+        <label>Financial Categories 1-3 ($800,001 - $30,000,000)</label>
+    </customValue>
+    <customValue>
+        <fullName>Self-certifying Categories - SC1 and SC2 ($200,000 - $800,000)</fullName>
+        <default>false</default>
+        <label>Self-certifying Categories - SC1 and SC2 ($200,000 - $800,000)</label>
+    </customValue>
+    <customValue>
+        <fullName>Licence Renewal</fullName>
+        <default>false</default>
+        <label>Licence Renewal</label>
+    </customValue>
+    <customValue>
+        <fullName>Safer Building P1</fullName>
+        <default>false</default>
+        <label>Safer Building P1</label>
+    </customValue>
+    <customValue>
+        <fullName>Safer Building P2</fullName>
+        <default>false</default>
+        <label>Safer Building P2</label>
+    </customValue>
+    <customValue>
+        <fullName>Safer Building P3</fullName>
+        <default>false</default>
+        <label>Safer Building P3</label>
+    </customValue>
+    <customValue>
+        <fullName>Licence Application</fullName>
+        <default>false</default>
+        <label>Licence Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Trust Account Notification</fullName>
+        <default>false</default>
+        <label>Trust Account Notification</label>
+    </customValue>
+    <customValue>
+        <fullName>Trust Account Complaint</fullName>
+        <default>false</default>
+        <label>Trust Account Complaint</label>
+    </customValue>
+    <customValue>
+        <fullName>CPD</fullName>
+        <default>false</default>
+        <label>CPD</label>
+    </customValue>
+    <customValue>
+        <fullName>s109B_Interstate_NZ_Licence_Notification</fullName>
+        <default>false</default>
+        <label>Interstate or New Zealand Licence Notification</label>
+    </customValue>
+    <customValue>
+        <fullName>Temporary_File_Upload</fullName>
+        <default>false</default>
+        <label>Temporary File Upload</label>
+    </customValue>
+    <customValue>
+        <fullName>Industry Shortages</fullName>
+        <default>false</default>
+        <label>Industry Shortages</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance Search Request</fullName>
+        <default>false</default>
+        <label>Insurance Search Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Self-certifying Categories - SC1 and SC2 ($300,000 - $600,000)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Self-certifying Categories - SC1 and SC2 ($300,000 - $600,000)</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Categories 1-3 ($600,001 - $30,000,000)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financial Categories 1-3 ($600,001 - $30,000,000)</label>
+    </customValue>
+    <customValue>
+        <fullName>Self-certifying Categories - SC1 and SC2 ($200,000 - $600,000)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Self-certifying Categories - SC1 and SC2 ($200,000 - $600,000)</label>
+    </customValue>
+    <masterLabel>Form Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

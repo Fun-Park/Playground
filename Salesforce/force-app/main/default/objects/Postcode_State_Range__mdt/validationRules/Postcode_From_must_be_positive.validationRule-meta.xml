@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Postcode_From_must_be_positive</fullName>
+    <active>true</active>
+    <description>Postcode From must contain a positive value.</description>
+    <errorConditionFormula>Postcode_From__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Postcode_From__c</errorDisplayField>
+    <errorMessage>Postcode From must contain a positive value.</errorMessage>
+</ValidationRule>

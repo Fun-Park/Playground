@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Formula_Fields</fullName>
+    <active>true</active>
+    <description>Calculated fields (such as formula fields) cannot subscribe to field history.  This is because a trigger cannot subscribe to a calculated fields changes.  When available, this formula should be changed to &quot;Field__r.IsCalculated&quot;.</description>
+    <errorConditionFormula>CONTAINS(Field__r.DataType, &apos;Formula&apos;)</errorConditionFormula>
+    <errorDisplayField>Field__c</errorDisplayField>
+    <errorMessage>Formula cannot subscribe to field history.</errorMessage>
+</ValidationRule>

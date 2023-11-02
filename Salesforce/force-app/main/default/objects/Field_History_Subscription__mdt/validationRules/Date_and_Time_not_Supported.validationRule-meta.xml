@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_and_Time_not_Supported</fullName>
+    <active>true</active>
+    <description>Date, Time, and Date/Time fields cannot be subscribed to field history.  This is due to time zone issues, that can be solved by adding a time zone offset field to the user record.</description>
+    <errorConditionFormula>OR(
+   CONTAINS(Field__r.DataType, &apos;Date&apos;),
+   CONTAINS(Field__r.DataType, &apos;Time&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Field__c</errorDisplayField>
+    <errorMessage>Date, Time, and Date/Time fields cannot be subscribed to field history.</errorMessage>
+</ValidationRule>

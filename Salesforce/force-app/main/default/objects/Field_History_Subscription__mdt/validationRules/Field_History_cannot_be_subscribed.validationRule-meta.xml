@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_History_cannot_be_subscribed</fullName>
+    <active>true</active>
+    <description>Cannot subscribe field history to field history.</description>
+    <errorConditionFormula>Object__r.DeveloperName = &quot;Field_History&quot;</errorConditionFormula>
+    <errorDisplayField>Object__c</errorDisplayField>
+    <errorMessage>Cannot subscribe field history to field history.</errorMessage>
+</ValidationRule>

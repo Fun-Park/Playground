@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Docs_Template__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The name of the document to be generated, inserts in to the Policy Transaction field Document Name, which then is used in the formula field Document Type. Document Type is what EDS uses for selecting the ActiveDoc template</inlineHelpText>
+    <label>Active Docs Template</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Cover</fullName>
+                <default>true</default>
+                <label>Additional Cover</label>
+            </value>
+            <value>
+                <fullName>Amend Insurance Certificate</fullName>
+                <default>false</default>
+                <label>Amend Insurance Certificate</label>
+            </value>
+            <value>
+                <fullName>Amend Notice of Cover</fullName>
+                <default>false</default>
+                <label>Amend Notice of Cover</label>
+            </value>
+            <value>
+                <fullName>Construction Notification</fullName>
+                <default>false</default>
+                <label>Construction Notification</label>
+            </value>
+            <value>
+                <fullName>Deemed 68 NEW Leg</fullName>
+                <default>false</default>
+                <label>Deemed 68 NEW Leg</label>
+            </value>
+            <value>
+                <fullName>Deemed 69 OLD Leg</fullName>
+                <default>false</default>
+                <label>Deemed 69 OLD Leg</label>
+            </value>
+            <value>
+                <fullName>Insurance Certificate</fullName>
+                <default>false</default>
+                <label>Insurance Certificate</label>
+            </value>
+            <value>
+                <fullName>Insurance Search</fullName>
+                <default>false</default>
+                <label>Insurance Search</label>
+            </value>
+            <value>
+                <fullName>Notice of Cover</fullName>
+                <default>false</default>
+                <label>Notice of Cover</label>
+            </value>
+            <value>
+                <fullName>Statutory Declaration</fullName>
+                <default>false</default>
+                <label>Statutory Declaration</label>
+            </value>
+            <value>
+                <fullName>Tax Invoice</fullName>
+                <default>false</default>
+                <label>Tax Invoice</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

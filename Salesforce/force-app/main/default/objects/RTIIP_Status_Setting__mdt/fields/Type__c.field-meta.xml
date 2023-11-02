@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Type</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Right to Information Access Application</fullName>
+                    <default>true</default>
+                    <label>Right to Information Access Application</label>
+                </value>
+                <value>
+                    <fullName>Information Privacy Access Application</fullName>
+                    <default>false</default>
+                    <label>Information Privacy Access Application</label>
+                </value>
+                <value>
+                    <fullName>Information Privacy Amendment Application</fullName>
+                    <default>false</default>
+                    <label>Information Privacy Amendment Application</label>
+                </value>
+                <value>
+                    <fullName>Administrative Access Request</fullName>
+                    <default>false</default>
+                    <label>Administrative Access Request</label>
+                </value>
+                <value>
+                    <fullName>Internal Review</fullName>
+                    <default>false</default>
+                    <label>Internal Review</label>
+                </value>
+                <value>
+                    <fullName>External Review</fullName>
+                    <default>false</default>
+                    <label>External Review</label>
+                </value>
+                <value>
+                    <fullName>QCAT Review</fullName>
+                    <default>false</default>
+                    <label>QCAT Review</label>
+                </value>
+                <value>
+                    <fullName>Privacy Complaint</fullName>
+                    <default>false</default>
+                    <label>Privacy Complaint</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

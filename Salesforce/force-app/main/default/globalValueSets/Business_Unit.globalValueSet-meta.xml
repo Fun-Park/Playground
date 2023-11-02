@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adjudication</fullName>
+        <default>false</default>
+        <label>Adjudication</label>
+    </customValue>
+    <customValue>
+        <fullName>Administration and Facilities Management</fullName>
+        <default>false</default>
+        <label>Administration and Facilities Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Behaviour and Design</fullName>
+        <default>false</default>
+        <label>Behaviour and Design</label>
+    </customValue>
+    <customValue>
+        <fullName>Cairns Service Centre</fullName>
+        <default>false</default>
+        <label>Cairns Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Certification Unit</fullName>
+        <default>false</default>
+        <label>Certification Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Compliance and Enforcement</fullName>
+        <default>false</default>
+        <label>Compliance and Enforcement</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact Centre</fullName>
+        <default>false</default>
+        <label>Contact Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer and Communications</fullName>
+        <default>false</default>
+        <label>Customer and Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Service Improvement</fullName>
+        <default>false</default>
+        <label>Customer Service Improvement</label>
+    </customValue>
+    <customValue>
+        <fullName>Debt Recovery</fullName>
+        <default>false</default>
+        <label>Debt Recovery</label>
+    </customValue>
+    <customValue>
+        <fullName>Education &amp; Engagement</fullName>
+        <default>false</default>
+        <label>Education &amp; Engagement</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance</fullName>
+        <default>false</default>
+        <label>Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Compliance</fullName>
+        <default>false</default>
+        <label>Financial Compliance</label>
+    </customValue>
+    <customValue>
+        <fullName>Forensic Accounting and Exclusions</fullName>
+        <default>false</default>
+        <label>Forensic Accounting and Exclusions</label>
+    </customValue>
+    <customValue>
+        <fullName>Gold Coast Service Centre</fullName>
+        <default>false</default>
+        <label>Gold Coast Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Human Resources</fullName>
+        <default>false</default>
+        <label>Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Industry Skills</fullName>
+        <default>false</default>
+        <label>Industry Skills</label>
+    </customValue>
+    <customValue>
+        <fullName>Insights and Analytics</fullName>
+        <default>false</default>
+        <label>Insights and Analytics</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance Services</fullName>
+        <default>false</default>
+        <label>Insurance Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Integrity and Complaints</fullName>
+        <default>false</default>
+        <label>Integrity and Complaints</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal Review Unit</fullName>
+        <default>false</default>
+        <label>Internal Review Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Learning &amp; Development</fullName>
+        <default>false</default>
+        <label>Learning &amp; Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Licensing Services</fullName>
+        <default>false</default>
+        <label>Licensing Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Mackay Service Centre</fullName>
+        <default>false</default>
+        <label>Mackay Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Maryborough Service Centre</fullName>
+        <default>false</default>
+        <label>Maryborough Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Media &amp; Government Relations</fullName>
+        <default>false</default>
+        <label>Media &amp; Government Relations</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministerial &amp; Executive Services</fullName>
+        <default>false</default>
+        <label>Ministerial &amp; Executive Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Conforming Building Products</fullName>
+        <default>false</default>
+        <label>Non-Conforming Building Products</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Standards Unit</fullName>
+        <default>false</default>
+        <label>Payment Standards Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Plumbing and Pools Investigations Unit</fullName>
+        <default>false</default>
+        <label>Plumbing and Pools Investigations Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Policy and Legislation</fullName>
+        <default>false</default>
+        <label>Policy and Legislation</label>
+    </customValue>
+    <customValue>
+        <fullName>Portfolio Delivery</fullName>
+        <default>false</default>
+        <label>Portfolio Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>Procurement</fullName>
+        <default>false</default>
+        <label>Procurement</label>
+    </customValue>
+    <customValue>
+        <fullName>Project Trust Account Audits</fullName>
+        <default>false</default>
+        <label>Project Trust Account Audits</label>
+    </customValue>
+    <customValue>
+        <fullName>Records</fullName>
+        <default>false</default>
+        <label>Records</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Services</fullName>
+        <default>false</default>
+        <label>Regional Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Resolution Services</fullName>
+        <default>false</default>
+        <label>Resolution Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Right to Information &amp; Privacy</fullName>
+        <default>false</default>
+        <label>Right to Information &amp; Privacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Rockhampton Service Centre</fullName>
+        <default>false</default>
+        <label>Rockhampton Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Safer Buildings</fullName>
+        <default>false</default>
+        <label>Safer Buildings</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategy, Planning and Performance</fullName>
+        <default>false</default>
+        <label>Strategy, Planning and Performance</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunshine Coast Service Centre</fullName>
+        <default>false</default>
+        <label>Sunshine Coast Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical Standards Unit</fullName>
+        <default>false</default>
+        <label>Technical Standards Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Toowoomba Service Centre</fullName>
+        <default>false</default>
+        <label>Toowoomba Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Townsville Service Centre</fullName>
+        <default>false</default>
+        <label>Townsville Service Centre</label>
+    </customValue>
+    <customValue>
+        <fullName>Transformation &amp; Improvement</fullName>
+        <default>false</default>
+        <label>Transformation &amp; Improvement</label>
+    </customValue>
+    <description>Business Unit of SME</description>
+    <masterLabel>Business Unit</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

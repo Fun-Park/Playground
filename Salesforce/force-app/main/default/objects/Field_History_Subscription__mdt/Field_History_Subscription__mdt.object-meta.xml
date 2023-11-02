@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used to declaratively define which fields should have field tracking enabled via the Field_History__c object.</description>
+    <label>Field History Subscription</label>
+    <pluralLabel>Field History Subscriptions</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

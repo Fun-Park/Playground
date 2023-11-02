@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Review</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Allowed_Statuses__c</columns>
+    <columns>Allow_Stop_Clock_Override__c</columns>
+    <columns>Clock_Action__c</columns>
+    <columns>Code__c</columns>
+    <columns>Due_Date_Action__c</columns>
+    <columns>Extension_Days__c</columns>
+    <columns>Status__c</columns>
+    <columns>Stop_Clock_Start_Date__c</columns>
+    <columns>Type__c</columns>
+    <columns>Usage__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Internal Review</value>
+        </filters>
+    <label>Internal Review</label>
+    <language>en_US</language>
+</ListView>

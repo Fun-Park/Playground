@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACN_Endpoint__c</fullName>
+    <description>Endpoint url for ACN search</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Endpoint url for ACN search</inlineHelpText>
+    <label>ACN Endpoint</label>
+    <required>true</required>
+    <type>Url</type>
+</CustomField>

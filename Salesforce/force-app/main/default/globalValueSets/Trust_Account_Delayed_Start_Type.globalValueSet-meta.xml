@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Ad Hoc</fullName>
+        <default>false</default>
+        <label>Ad hoc</label>
+    </customValue>
+    <customValue>
+        <fullName>In Perpetuity</fullName>
+        <default>false</default>
+        <label>In perpetuity</label>
+    </customValue>
+    <description>Describes the type of delayed start applied to a trust account (if any).  For more information refer to Jira PBA-955.</description>
+    <masterLabel>Trust Account Delayed Start Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

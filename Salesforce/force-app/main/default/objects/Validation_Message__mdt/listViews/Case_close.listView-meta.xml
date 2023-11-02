@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_close</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Event__c</columns>
+    <columns>Index__c</columns>
+    <columns>Message_Content__c</columns>
+    <columns>ObjectAPI__c</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+            <field>ObjectAPI__c</field>
+            <operation>equals</operation>
+            <value>Case__c</value>
+        </filters>
+    <label>Case close</label>
+    <language>en_US</language>
+</ListView>

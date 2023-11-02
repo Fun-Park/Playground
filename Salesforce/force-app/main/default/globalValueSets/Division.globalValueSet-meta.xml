@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adjudication Registrar</fullName>
+        <default>false</default>
+        <label>Adjudication Registrar</label>
+    </customValue>
+    <customValue>
+        <fullName>Board</fullName>
+        <default>false</default>
+        <label>Board</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Services</fullName>
+        <default>false</default>
+        <label>Financial Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Human Resources</fullName>
+        <default>false</default>
+        <label>Human Resources</label>
+    </customValue>
+    <customValue>
+        <fullName>Information Services</fullName>
+        <default>false</default>
+        <label>Information Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Services</fullName>
+        <default>false</default>
+        <label>Legal Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of the Commissioner</fullName>
+        <default>false</default>
+        <label>Office of the Commissioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Trades &amp; Regulatory</fullName>
+        <default>false</default>
+        <label>Service Trades &amp; Regulatory</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Trades Council</fullName>
+        <default>false</default>
+        <label>Service Trades Council</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategy and Transformation</fullName>
+        <default>false</default>
+        <label>Strategy and Transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical Services</fullName>
+        <default>false</default>
+        <label>Technical Services</label>
+    </customValue>    
+    <masterLabel>Division</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

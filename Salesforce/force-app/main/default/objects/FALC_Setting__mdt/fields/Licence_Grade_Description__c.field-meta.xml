@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Licence_Grade_Description__c</fullName>
+    <description>An array of key-value (grade-description) string to identify the licence grades in scope for FALC service</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>An array of key-value (grade-description) string to identify the licence grades in scope for FALC service</inlineHelpText>
+    <label>Licence Grade Description</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

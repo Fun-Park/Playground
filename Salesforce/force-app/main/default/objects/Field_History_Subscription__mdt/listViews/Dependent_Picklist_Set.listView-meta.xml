@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dependent_Picklist_Set</fullName>
+    <columns>MasterLabel</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Object__c</field>
+        <operation>equals</operation>
+        <value>Dependent_Picklist_Set</value>
+    </filters>
+    <label>Dependent Picklist Set</label>
+    <language>en_US</language>
+</ListView>

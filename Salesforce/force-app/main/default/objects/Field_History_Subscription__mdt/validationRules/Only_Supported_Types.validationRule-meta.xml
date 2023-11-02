@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Supported_Types</fullName>
+    <active>true</active>
+    <description>Only Auto-Number, Checkbox, Currency, Email, Fax, Number, Percent. Phone, Picklist, Text (inc. Long and Rich Text), and URL field types are supported.  Note that for some reason, checkbox is listed as &quot;Boolean&quot;.</description>
+    <errorConditionFormula>NOT(
+    OR(
+        CONTAINS(Field__r.DataType, &apos;Auto Number&apos;),
+        CONTAINS(Field__r.DataType, &apos;Boolean&apos;),
+        CONTAINS(Field__r.DataType, &apos;Currency&apos;),
+        CONTAINS(Field__r.DataType, &apos;Email&apos;),
+        CONTAINS(Field__r.DataType, &apos;Fax&apos;),
+        CONTAINS(Field__r.DataType, &apos;Number&apos;),
+        CONTAINS(Field__r.DataType, &apos;Percent&apos;),
+        CONTAINS(Field__r.DataType, &apos;Phone&apos;),
+        CONTAINS(Field__r.DataType, &apos;Picklist&apos;),
+        CONTAINS(Field__r.DataType, &apos;Text&apos;),
+        CONTAINS(Field__r.DataType, &apos;URL&apos;)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Field__c</errorDisplayField>
+    <errorMessage>Only Auto-Number, Checkbox, Currency, Email, Fax, Number, Percent. Phone, Picklist, Text (inc. Long and Rich Text), and URL field types are supported.</errorMessage>
+</ValidationRule>

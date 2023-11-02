@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Option_Values__c</fullName>
+    <description>If the field type has been selected as a optional, this field provides the values of the available check-boxes. Must be separated by a comma (,) only. Do not use a comma within a field value.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>If the field type has been selected as a optional, this field provides the values of the available check-boxes. Must be separated by a comma (,) only. Do not use a comma within a field value.</inlineHelpText>
+    <label>Option Values</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

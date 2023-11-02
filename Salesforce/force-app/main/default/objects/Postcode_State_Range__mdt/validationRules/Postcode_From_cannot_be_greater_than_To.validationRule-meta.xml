@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Postcode_From_cannot_be_greater_than_To</fullName>
+    <active>true</active>
+    <description>The Postcode From value must not be greater than the Postcode To value.</description>
+    <errorConditionFormula>Postcode_From__c &gt; Postcode_To__c</errorConditionFormula>
+    <errorDisplayField>Postcode_To__c</errorDisplayField>
+    <errorMessage>The Postcode From value must not be greater than the Postcode To value.</errorMessage>
+</ValidationRule>

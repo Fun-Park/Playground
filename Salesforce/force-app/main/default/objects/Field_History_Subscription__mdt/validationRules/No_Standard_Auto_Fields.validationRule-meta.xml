@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Standard_Auto_Fields</fullName>
+    <active>true</active>
+    <description>The following system fields are not supported: CreatedBy, CreatedDate, Id, IsDeleted, LastActivityDate, LastModifiedBy, LastModifiedDate, LastReferencedDate, LastViewedDate, SystemModstamp, and UserRecordAccess.</description>
+    <errorConditionFormula>OR(
+    Field__r.DeveloperName = &apos;CreatedBy&apos;,
+    Field__r.DeveloperName = &apos;CreatedDate&apos;,
+    Field__r.DeveloperName = &apos;Id&apos;,
+    Field__r.DeveloperName = &apos;IsDeleted&apos;,
+    Field__r.DeveloperName = &apos;LastActivityDate&apos;,
+    Field__r.DeveloperName = &apos;LastModifiedBy&apos;,
+    Field__r.DeveloperName = &apos;LastModifiedDate&apos;,
+    Field__r.DeveloperName = &apos;LastReferencedDate&apos;,
+    Field__r.DeveloperName = &apos;LastViewedDate&apos;,
+    Field__r.DeveloperName = &apos;SystemModstamp&apos;,
+    Field__r.DeveloperName = &apos;UserRecordAccess&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Field__c</errorDisplayField>
+    <errorMessage>The following system fields are not supported: CreatedBy, CreatedDate, Id, IsDeleted, LastActivityDate, LastModifiedBy, LastModifiedDate, LastReferencedDate, LastViewedDate, SystemModstamp, and UserRecordAccess.</errorMessage>
+</ValidationRule>

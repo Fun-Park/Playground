@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Works Type and Services combinations for RHF Contractor Register</description>
+    <label>RHF Workstype Service</label>
+    <pluralLabel>RHF Workstype Services</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

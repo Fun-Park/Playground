@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Class_One__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>PPI Work Class One</label>
+    <referenceTo>PPI_Work_Class_One__mdt</referenceTo>
+    <relationshipLabel>PPI Work Class One and Twos</relationshipLabel>
+    <relationshipName>PPI_Work_Class_One_and_Twos</relationshipName>
+    <required>true</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>
