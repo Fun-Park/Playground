@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualification_Requirements__c</fullName>
+    <description>The qualification requirements to display on the Fire Protection Licensing Framework Tool (FTLFT - OLA-416).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The qualification requirements to display on the Fire Protection Licensing Framework Tool.</inlineHelpText>
+    <label>Qualification Requirements Text</label>
+    <length>3000</length>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

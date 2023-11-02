@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Licence_Type__c</fullName>
+    <description>The licence type for this type-class-grade combination.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The licence type for this type-class-grade combination.</inlineHelpText>
+    <label>Licence Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>I</fullName>
+                    <default>false</default>
+                    <label>Individual</label>
+                </value>
+                <value>
+                    <fullName>AI</fullName>
+                    <default>false</default>
+                    <label>Accreditation - Individual</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>Company</label>
+                </value>
+                <value>
+                    <fullName>NC</fullName>
+                    <default>false</default>
+                    <label>Authorised Nominating Authority - C</label>
+                </value>
+                <value>
+                    <fullName>NO</fullName>
+                    <default>false</default>
+                    <label>Authorised Nominating Authority - O</label>
+                </value>
+                <value>
+                    <fullName>JI</fullName>
+                    <default>false</default>
+                    <label>Adjudicator</label>
+                </value>
+                <value>
+                    <fullName>NI</fullName>
+                    <default>false</default>
+                    <label>Authorised Nominating Authority - I</label>
+                </value>
+                <value>
+                    <fullName>O</fullName>
+                    <default>false</default>
+                    <label>Organisation</label>
+                </value>
+                <value>
+                    <fullName>PI</fullName>
+                    <default>false</default>
+                    <label>Owner Builder Permit - I</label>
+                </value>
+                <value>
+                    <fullName>PC</fullName>
+                    <default>false</default>
+                    <label>Owner Builder Permit - C</label>
+                </value>
+                <value>
+                    <fullName>PO</fullName>
+                    <default>false</default>
+                    <label>Owner Builder Permit - O</label>
+                </value>
+                <value>
+                    <fullName>PP</fullName>
+                    <default>false</default>
+                    <label>Owner Builder Permit - P</label>
+                </value>
+                <value>
+                    <fullName>PS-I</fullName>
+                    <default>false</default>
+                    <label>Pool Safety - Individual</label>
+                </value>
+                <value>
+                    <fullName>PD</fullName>
+                    <default>false</default>
+                    <label>Plumber / Drainer</label>
+                </value>
+                <value>
+                    <fullName>PPD</fullName>
+                    <default>false</default>
+                    <label>Provisional Plumber / Drainer</label>
+                </value>
+                <value>
+                    <fullName>BP</fullName>
+                    <default>false</default>
+                    <label>Backflow Prevention</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>
