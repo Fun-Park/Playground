@@ -220,6 +220,11 @@ jobs:
         shell: bash
         run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --output package
 
+      # print out package.xml file
+      - name: 'Delta package.xml output'
+        shell: bash
+        run: cat ${{env.PACKAGEXML_FILE}} >> $GITHUB_STEP_SUMMARY
+
       - name: Upload delta output as artifacts
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         uses: actions/upload-artifact@v3
@@ -257,10 +262,7 @@ jobs:
             echo "LOGIN_URL=https://playground4-dev-ed.develop.my.salesforce.com/" >> $GITHUB_ENV
           fi
 
-        # testing Logout package.xml file
-      - name: 'Delta package.xml output'
-        shell: bash
-        run: cat ${{env.PACKAGEXML_FILE}}
+
 
         #############################################################################
         ## Replace steps                                                           ##
