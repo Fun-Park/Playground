@@ -113,7 +113,8 @@ jobs:
     steps:
       - name: Add Input Options to Summary
         run: |
-          echo '# Deployment Summary for ${{github.ref_name}}' >> $GITHUB_STEP_SUMMARY
+          echo '# Deployment Summary ' >> $GITHUB_STEP_SUMMARY
+          echo 'Branch: ${{github.ref_name}}' >> $GITHUB_STEP_SUMMARY
           echo '## Input Options' >> $GITHUB_STEP_SUMMARY
           echo '${{ toJson(github.event.inputs) }}' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY          
@@ -144,8 +145,6 @@ jobs:
           tar xJf sf-linux-x64.tar.xz -C ~/cli/sf --strip-components 1
           echo "$HOME/cli/sf/bin" >> $GITHUB_PATH
           ~/cli/sf/bin/sf version
-          echo '## SF CLI Details' >> $GITHUB_STEP_SUMMARY   
-          echo "CLI Home: $HOME/cli/sf/bin" >> $GITHUB_STEP_SUMMARY
           echo "repo url :${{env.SERVER_URL}}/${{env.REPO_URL}}/tree/${{env.BRANCH_NAME}}"
 
       # Checkout the source code
@@ -197,17 +196,6 @@ jobs:
             echo "last successful commit :${{env.NX_BASE}}"
             echo "SF_ORG_API_VERSION :${{env.SF_ORG_API_VERSION}}"
           
-      - name: 'Output Change Log'
-        id: 'OutputChangeLog'
-        run: |
-          git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{steps.last_successful_commit.outputs.base}}... > ./CHANGE_LOG.txt
-          echo "Change Log"
-          cat ./CHANGE_LOG.txt
-          echo '## Change Log' >> $GITHUB_STEP_SUMMARY
-          echo "Last successful workflow run commit-id: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
-          cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-
       # Install Git Delta
       - name: 'Install Git Delta'
         if: ${{steps.last_successful_commit.outputs.base != ''}}
@@ -978,8 +966,19 @@ jobs:
             then
                echo "deployment-package.zip created." >> $GITHUB_STEP_SUMMARY
             else
-               echo "deployment-package.zip not created !." >> $GITHUB_STEP_SUMMARY
+               echo "deployment-package.zip artefact not created for this branch" >> $GITHUB_STEP_SUMMARY
             fi
+
+      - name: 'Output Change Log'
+        id: 'OutputChangeLog'
+        run: |
+          git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{steps.last_successful_commit.outputs.base}}... > ./CHANGE_LOG.txt
+          echo "Change Log"
+          cat ./CHANGE_LOG.txt
+          echo '## Change Log' >> $GITHUB_STEP_SUMMARY
+          cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
+          echo "Last successful run has the latest commit-id of: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
+          echo '```' >> $GITHUB_STEP_SUMMARY
 
       #############################################################################
       ## Build Deploy                                                            ##
@@ -990,4 +989,13 @@ jobs:
           SFDX_DISABLE_DNS_CHECK: true
         run: >-
           sf project deploy start -x ${{env.PACKAGEXML_FILE}} 
-          -l NoTestRun -o ${{env.SF_USERNAME}} -w 10000 --verbose
+          -l NoTestRun -o ${{env.SF_USERNAME}} -w 10000 --verbose > deploy-result.json
+
+      - name: check if deploy-result.json file exist
+        run: |
+          if test -f ./deploy-result.json;
+          then
+              echo "deploy-result.json found." >> $GITHUB_STEP_SUMMARY
+          else
+              echo "deploy-result.json not found" >> $GITHUB_STEP_SUMMARY
+          fi
