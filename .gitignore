@@ -48,3 +48,5 @@ node_modules
 
 # Local folders
 manifest/
+scripts/
+sgd_output/

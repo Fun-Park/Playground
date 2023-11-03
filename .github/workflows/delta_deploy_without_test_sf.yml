@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Delta - With Tests
+name: Delta - Without Tests
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -17,54 +17,47 @@ on:
         default: false
         required: false
         type: boolean
-      ValidateOnly:
-        description: 'Validation only'
-        default: false
-        required: false
-        type: boolean
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  UserValidation:
-    runs-on: ubuntu-latest
-    outputs:
-      UserValidation: ${{ steps.checkUserMember.outputs.isTeamMember }}
-    steps:
-      - name: User Validation Initialization
-        run: echo Running on branch ${GITHUB_REF##*/}
+  # UserValidation:
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     UserValidation: ${{ steps.checkUserMember.outputs.isTeamMember }}
+  #   steps:
+  #     - name: User Validation Initialization
+  #       run: echo Running on branch ${GITHUB_REF##*/}
 
-      - name: Retrieve User Membership
-        uses: tspascoal/get-user-teams-membership@v2
-        id: checkUserMember
-        with:
-          username: ${{ github.actor }}
-          team: 'Salesforce Developers'
-          GITHUB_TOKEN: ${{ secrets.QBCC_PAT_FOR_WORKFLOWS }}
+  #     - name: Retrieve User Membership
+  #       uses: tspascoal/get-user-teams-membership@v2
+  #       id: checkUserMember
+  #       with:
+  #         username: ${{ github.actor }}
+  #         team: 'Salesforce Developers'
+  #         GITHUB_TOKEN: ${{ secrets.QBCC_PAT_FOR_WORKFLOWS }}
 
-      - name: Validate User And Terminate Step
-        run: |
-          if ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }} 
-          then
-            echo "Is Member"
-          else 
-            echo "Is Not Member"
-            exit 1            
-          fi
-      - name: User Validation Complete
-        run: 
-          echo "User Validation Complete"
-  generic-deploy-with-test:
+  #     - name: Validate User And Terminate Step
+  #       run: |
+  #         if ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }} 
+  #         then
+  #           echo "Is Member"
+  #         else 
+  #           echo "Is Not Member"
+  #           exit 1            
+  #         fi
+  #     - name: User Validation Complete
+  #       run: 
+  #         echo "User Validation Complete"
+  generic-deploy-without-test:
     runs-on: ubuntu-latest
-    needs: UserValidation
-    if: ${{needs.UserValidation.outputs.UserValidation == 'true'}}     
+    # needs: UserValidation
+    # if: ${{needs.UserValidation.outputs.UserValidation == 'true'}}     
     env:
-      WORKFLOW_ID: 'delta_manual.yml'
+      WORKFLOW_ID: 'delta_deploy_without_test_sf.yml'
       PACKAGEXML_FILE: './package/package.xml'
       FULL_PACKAGEXML_FILE: './package/full_package.xml'
       PACKAGEXML_PREPOSTBUILD_FILE: './package/pre_post_package.xml'
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      OUTPUT_TESTCLASS_STRING: 'test'
-      TESTSCRIPT_OUTPUT_FILENAME: './output/allTestClasses.csv'
       WORKFLOW_DIR: '${{secrets.FORCE_APP_DIR_ALL_ENV}}workflows/'
       NAMECREDENTIAL_DIR: '${{secrets.FORCE_APP_DIR_ALL_ENV}}namedCredentials/'
       EMAIL_DIR: '${{secrets.FORCE_APP_DIR_ALL_ENV}}email/'
@@ -122,11 +115,10 @@ jobs:
         run: |
           echo '# Deployment Summary for ${{github.ref_name}}' >> $GITHUB_STEP_SUMMARY
           echo '## Input Options' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
           echo '${{ toJson(github.event.inputs) }}' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY          
 
-      ############################################################################
+       ############################################################################
       # Dependencies and plugin setup                                           ##
       ############################################################################
 
@@ -137,85 +129,100 @@ jobs:
           echo "BRANCH_NAME=$(echo ${{github.ref_name}})" >> $GITHUB_ENV
           echo "SERVER_URL=$(echo ${{github.server_url}})" >> $GITHUB_ENV
           echo "REPO_URL=$(echo ${{github.repository}})" >> $GITHUB_ENV
-          echo "RUN_ID=${{ github.run_id }}" >> $GITHUB_ENV
+          echo "RUN_ID=${{ github.run_id }}" >> $GITHUB_ENV          
 
-      - name: 'Install Salesforce CLI'
-        run: |
-          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
-          mkdir ~/sfdx
-          tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
-          echo "$HOME/sfdx/bin" >> $GITHUB_PATH
-          ~/sfdx/bin/sfdx version
+      # Install SF cli with a tar file
+      # -------------------------------
+      # get tar file,
+      # create directory where to install, let say ~/cli/sf
+      # unpack the tar file. -C unpacks the contents in the ~/cli/sf directory, while --strip-components 1 removes the root path component.
+      - name: 'Install Salesforce CLI with a tar file'
+        run: |        
+          wget https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz
+          mkdir ~/cli
+          mkdir ~/cli/sf
+          tar xJf sf-linux-x64.tar.xz -C ~/cli/sf --strip-components 1
+          echo "$HOME/cli/sf/bin" >> $GITHUB_PATH
+          ~/cli/sf/bin/sf version
+          echo '## SF CLI Details' >> $GITHUB_STEP_SUMMARY   
+          echo "CLI Home: $HOME/cli/sf/bin" >> $GITHUB_STEP_SUMMARY
+          echo "repo url :${{env.SERVER_URL}}/${{env.REPO_URL}}/tree/${{env.BRANCH_NAME}}"
 
       # Checkout the source code
-      - name: 'Checkout source code'
-        uses: actions/checkout@v3
+      # fetch-depth: Number of commits to fetch. 0 indicates all history for all branches and tags.
+      - name: 'Checkout the source code of [${{env.BRANCH_NAME}}] branch'
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{env.BRANCH_NAME}}
+
+      # Install dependencies set in package-lock.json locates in root of the repo
+      - name: Install Nodejs dependencies
+        run: npm install
 
       - name: 'setup node version'
         uses: actions/setup-node@v3
         with:
           node-version-file: 'package.json'
 
-      - name: 'update_git_repo_url'
+      - name: 'Update git repo url in package.json'
         uses: mingjun97/file-regex-replace@v1
         with:
           regex: '"url": "[^"]*"'
           replacement: '"url": "${{env.SERVER_URL}}/${{env.REPO_URL}}/tree/${{env.BRANCH_NAME}}"'
-          flags: "gim"                                      # Optional, defaults to "g"
-          include: "package.json"                         # Optional, defaults to ".*"
-          exclude: 'Salesforce/'                                   # Optional, defaults to '.^'
-          encoding: 'utf8'                                # Optional, defaults to 'utf8'
+          flags: "gim"                                                                        # Optional, defaults to "g"
+          include: "package.json"                                                             # Optional, defaults to ".*"
+          exclude: 'Salesforce/'                                                              # Optional, defaults to '.^'
+          encoding: 'utf8'                                                                    # Optional, defaults to 'utf8'
           path: "./"
 
-      # Install dependencies set in package-lock.json locates in root of the repo
-      - name: Install Nodejs dependencies
-        run: npm install
-
-      # Get latest successful commit
-      #- run: echo "-- last successful commit --" + ${{steps.last_successful_commit.outputs.commit_hash}}
-      - name: 'Get last successful commit'
-        uses: simondotm/last-successful-commit-action@v2
+      # Get last commit of successful workflow run
+      - name: 'Get last commit of successful workflow run'
+        uses: nrwl/nx-set-shas@v4
         id: last_successful_commit
         with:
-          branch: ${{env.BRANCH_NAME}}
-          workflow_id: ${{env.WORKFLOW_ID}}
-          github_token: ${{env.GITHUB_TOKEN}}
+          main-branch-name: ${{env.BRANCH_NAME}}
+          workflow-id: ${{env.WORKFLOW_ID}}
+          error-on-no-successful-workflow: false        # set to true to error and exit if no successful workflow run is found
 
-      - name: Set SFDX_API_VERSION
+      - name: Set SF_API_VERSION
         run: |
           sourceApiVersion=$(jq '.sourceApiVersion | tonumber' ./sfdx-project.json)
-          echo SFDX_API_VERSION=$sourceApiVersion.0 >> $GITHUB_ENV
-          sfdx config:set apiVersion=$sourceApiVersion.0 --global
-          sfdx config:list
+          echo SF_ORG_API_VERSION=$sourceApiVersion.0 >> $GITHUB_ENV
+          sf config set org-api-version=$sourceApiVersion.0 --global
+          sf config list
+
+      - name: 'echo environment variables'
+        run: |
+            echo "last successful commit :${{env.NX_BASE}}"
+            echo "SF_ORG_API_VERSION :${{env.SF_ORG_API_VERSION}}"
           
       - name: 'Output Change Log'
         id: 'OutputChangeLog'
         run: |
-          git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{steps.last_successful_commit.outputs.commit_hash}}... > ./CHANGE_LOG.txt
+          git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{steps.last_successful_commit.outputs.base}}... > ./CHANGE_LOG.txt
           echo "Change Log"
           cat ./CHANGE_LOG.txt
           echo '## Change Log' >> $GITHUB_STEP_SUMMARY
+          echo "Last successful workflow run commit-id: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
           echo '```' >> $GITHUB_STEP_SUMMARY
           cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
 
       # Install Git Delta
       - name: 'Install Git Delta'
-        if: ${{steps.last_successful_commit.outputs.commit_hash != ''}}
-        run: echo y | sfdx plugins:install sfdx-git-delta
+        if: ${{steps.last_successful_commit.outputs.base != ''}}
+        run: echo y | sf plugins install sfdx-git-delta
 
-      # Compare and pickup delta change only#
-      # sfdx sgd:source:delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.commit_hash}} --ignore .gitignore --output .
+      # Pickup delta change only. The delta output is kept in a variable env.PACKAGEXML_FILE 
       - name: 'Compare and pickup delta change only'
-        if: ${{steps.last_successful_commit.outputs.commit_hash != ''}}
+        if: ${{steps.last_successful_commit.outputs.base != ''}}
         shell: bash
-        run: sfdx sgd:source:delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.commit_hash}} --ignore ignore --output .
+        run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --ignore ignore --output .
 
+      # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
       - name: 'Deploy Full Package XML if no Delta'
-        if: ${{steps.last_successful_commit.outputs.commit_hash == ''}}
+        if: ${{steps.last_successful_commit.outputs.base == ''}}
         shell: bash
         run: cat ${{env.FULL_PACKAGEXML_FILE}} > ${{env.PACKAGEXML_FILE}}
 
@@ -233,51 +240,19 @@ jobs:
       - name: 'Authenticate Target Org'
         run: |
           echo  ${{env.SFDX_URL}} > ~/SANDBOX_SFDX_URL.txt
-          sfdx auth:sfdxurl:store -f ~/SANDBOX_SFDX_URL.txt -a sfdxsandbox --setdefaultusername
+          sf org login sfdx-url --sfdx-url-file ~/SANDBOX_SFDX_URL.txt 
           # Set the login url for test class login
           if ${{github.ref_name != 'master'}}
           then
-            echo LOGIN_URL=https://qbcc--$SFENV_NAME.sandbox.my.salesforce.com >> $GITHUB_ENV
+            echo LOGIN_URL=https://playground4-dev-ed.develop.my.salesforce.com/ >> $GITHUB_ENV
           else 
-            echo "LOGIN_URL=https://qbcc.my.salesforce.com" >> $GITHUB_ENV
+            echo "LOGIN_URL=https://playground4-dev-ed.develop.my.salesforce.com/" >> $GITHUB_ENV
           fi
 
         # testing Logout package.xml file
-      - name: 'Display package.xml file'
+      - name: 'Delta package.xml output'
         shell: bash
         run: cat ${{env.PACKAGEXML_FILE}}
-
-      - name: Check for Apex Class or Trigger in Package.xml
-        run: |
-          if grep -qiE "<name>Apex(Class|Trigger)</name>" ${{env.PACKAGEXML_FILE}}; then 
-            echo "APEX_CHANGES=true" >> $GITHUB_ENV 
-          else 
-            echo "APEX_CHANGES=false" >> $GITHUB_ENV 
-          fi
-
-      - name: 'Run test class extract script from NodeJs'
-        if: ${{steps.last_successful_commit.outputs.commit_hash != '' && env.APEX_CHANGES == 'true'}}
-        id: getTestClassString
-        run: npm run build --username=${{env.SF_USERNAME}} --loginUrl=${{env.LOGIN_URL}} --xmlFileName=${{env.PACKAGEXML_FILE}} --outputFileName=${{env.TESTSCRIPT_OUTPUT_FILENAME}}
-        env:
-          SF_DEPLOY_PWD: ${{env.SF_DEPLOY_PWD}}
-          SF_DEPLOY_TOKEN: ${{env.SF_DEPLOY_TOKEN}}
-
-
-      - name: 'Create empty test class list'
-        if: ${{steps.last_successful_commit.outputs.commit_hash == '' || env.APEX_CHANGES == 'false'}}
-        run: touch ${{env.TESTSCRIPT_OUTPUT_FILENAME}}
-
-      - name: Read ${{env.TESTSCRIPT_OUTPUT_FILENAME}} content
-        id: testclass
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ${{env.TESTSCRIPT_OUTPUT_FILENAME}}
-
-      #  testing Logout testclass step output file
-      - name: 'Logout testclass step output'
-        shell: bash
-        run: echo ${{steps.testclass.outputs.content}}
 
         #############################################################################
         ## Replace steps                                                           ##
@@ -830,7 +805,6 @@ jobs:
           encoding: 'utf8'                                    # Optional, defaults to 'utf8'
           path: ${{env.REMOTE_SETTING_DIR}}
 
-
       - name: 'update_bpoint_remote_settings'
         uses: mingjun97/file-regex-replace@v1
         with:
@@ -948,126 +922,63 @@ jobs:
           encoding: 'utf8'                                # Optional, defaults to 'utf8'
           path: ${{env.SRC_QUEUES_DIR}}
 
-      - name: 'update_queue_email_for_education_and_engagement'
-        if: ${{env.BRANCH_NAME != 'master'}}
-        uses: mingjun97/file-regex-replace@v1
-        with:
-          regex: '<email>educationengagementteam@qbcc.qld.gov.au'
-          replacement: '<email>educationengagementteam@qbcc.qld.gov.au.${{env.SFENV_NAME }}'
-          flags: "gim"                                    # Optional, defaults to "g"
-          include: ${{env.QUEUE_EDUCATION_AND_ENGAGEMENT}}        # Optional, defaults to ".*"
-          exclude: '.^'                                   # Optional, defaults to '.^'
-          encoding: 'utf8'                                # Optional, defaults to 'utf8'
-          path: ${{env.SRC_QUEUES_DIR}}
+      #   # needs:remove_social_post_from_tabVisibilities
+      # - name: 'delete_social_post_files1'
+      #   # needs: remove_social_post_from_tabVisibilities
+      #   if: hashFiles('env.DELETE_SOCIAL_POST_WORKFLOW_FILE') != ''
+      #   run: |
+      #     rm ${{env.DELETE_SOCIAL_POST_WORKFLOW_FILE}}
 
-      - name: Test for DestructiveChanges and Deployment changes
-        run: |
-          if grep -q "<members>" destructiveChanges/destructiveChanges.xml; then
-            echo "There are Destructive Changes"
-            echo "ARCHIVE_DESTRUCTIVE_CHANGES=true" >> $GITHUB_ENV 
-          else 
-            echo "There are NO Destructive Changes"
-            echo "ARCHIVE_DESTRUCTIVE_CHANGES=false" >> $GITHUB_ENV 
-          fi
-          if grep -q "<members>" ${{env.PACKAGEXML_FILE}}; then
-            echo "There are changes to be deployed"
-            echo "DEPLOY_CHANGES=true" >> $GITHUB_ENV 
-          else 
-            echo "The package.xml is EMPTY therefore nothing to do"
-            echo "DEPLOY_CHANGES=false" >> $GITHUB_ENV 
-          fi
+      # - name: 'delete_social_post_files2'
+      #   # needs: remove_social_post_from_tabVisibilities
+      #   if: hashFiles('env.DELETE_SOCIAL_LAYOUT_FILE') != ''
+      #   run: |
+      #     rm ${{env.DELETE_SOCIAL_LAYOUT_FILE}}
 
-      - name: 'Archive DestructiveChanges if Found'
-        if: ${{env.ARCHIVE_DESTRUCTIVE_CHANGES == 'true'}}
-        uses: actions/upload-artifact@v3
-        with:
-          name: destructiveChanges    # Zip Filename that will be created
-          path: destructiveChanges
-          retention-days: 5
+      # - name: 'delete_social_post_files3'
+      #   # needs: remove_social_post_from_tabVisibilities
+      #   if: hashFiles('env.DELETE_FEED_ITEM_LAYOUT_FILE') != ''
+      #   run: |
+      #     rm ${{env.DELETE_FEED_ITEM_LAYOUT_FILE}}
+
+      # condition productions = true
+      # - name: 'delete_entitlement_files1'
+      #   if: hashFiles('env.DELETE_FEED_ITEM_LAYOUT_FILE') != ''
+      #   # needs: remove_social_post_from_tabVisibilities
+      #   run: |
+      #     rm ${{env.DELETE_ENTITLEMENT_BCIPA_APPLICATION_FILE}}
+      #     rm ${{env.DELETE_ENTITLEMENT_BCIPA_COMPLAINT_FILE}}
+      #     rm ${{env.DELETE_ENTITLEMENT_BCIPA_COMPLAINT_V2_FILE}}
 
       #Create zip of folder for uploading as artifact to increase performance due to large number of files
       - name: Zip artifact for deployment
-        if: ${{github.event.inputs.DEBUG == 'true' ||
-          env.BRANCH_NAME == 'master' ||
-          env.BRANCH_NAME == 'STAGING'}}
-        run: zip deployment-package.zip ${{env.PACKAGEXML_FILE}} ${{env.SRC_DIR}} -r
+        if: ${{github.event.inputs.DEBUG == 'true' || github.event.inputs.DEBUG == 'true' || env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'STAGING'}}
+        run: zip deployment-package.zip ${{env.PACKAGEXML_FILE}} ${{env.SRC_DIR}} --exclude ${{env.SRC_DIR}}globalValueSets/\* ${{env.SRC_DIR}}objects/*__mdt/\* ${{env.SRC_DIR}}customMetadata/\* -r
 
-      - name: Upload artifact for deployment job
-        if: ${{github.event.inputs.DEBUG == 'true' ||
-          env.BRANCH_NAME == 'master' ||
-          env.BRANCH_NAME == 'STAGING'}}
+      - name: Upload artifact for deployment job 
+        if: ${{github.event.inputs.DEBUG == 'true' || github.event.inputs.DEBUG == 'true' || env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'STAGING'}}
         uses: actions/upload-artifact@v3
         with:
           name: deployment-package    # Zip Filename that will be created
           path: deployment-package.zip
           retention-days: 5
 
+      - name: check if zip file exist
+        run: |
+            if test -f ./deployment-package.zip;
+            then
+               echo "deployment-package.zip created." >> $GITHUB_STEP_SUMMARY
+            else
+               echo "deployment-package.zip not created !." >> $GITHUB_STEP_SUMMARY
+            fi
+
       #############################################################################
       ## Build Deploy                                                            ##
       #############################################################################
-      - name: Validate only without destructive change and without testclass
-        if: ${{(github.event.inputs.ValidateOnly == 'true')  && (env.DEPLOY_CHANGES == 'true') && (env.ARCHIVE_DESTRUCTIVE_CHANGES == 'false') && (steps.testclass.outputs.content == '')}}
+      - name: Deploy without test classes
         shell: bash
         env:
           SFDX_DISABLE_DNS_CHECK: true
         run: >-
-          sfdx force:source:deploy -x ${{env.PACKAGEXML_FILE}} -u
-          ${{env.SF_USERNAME}} -l NoTestRun -w 10000 --checkonly --verbose --loglevel fatal
-
-      - name: Validate only with destructive change and without testclass
-        if: ${{(github.event.inputs.ValidateOnly == 'true')  && (env.DEPLOY_CHANGES == 'true') && (env.ARCHIVE_DESTRUCTIVE_CHANGES == 'true') && (steps.testclass.outputs.content == '')}}
-        shell: bash
-        env:
-          SFDX_DISABLE_DNS_CHECK: true
-        run: >-
-          sfdx force:source:deploy -x ${{env.PACKAGEXML_FILE}} --postdestructivechanges destructiveChanges/destructiveChanges.xml -u
-          ${{env.SF_USERNAME}} -l NoTestRun -w 10000 --checkonly --verbose --loglevel fatal
-
-      - name: Validate only with destructive change and with testclass
-        if: ${{(github.event.inputs.ValidateOnly == 'true')  && (env.DEPLOY_CHANGES == 'true') && (env.ARCHIVE_DESTRUCTIVE_CHANGES == 'true') && (steps.testclass.outputs.content != '')}}
-        shell: bash
-        env:
-          SFDX_DISABLE_DNS_CHECK: true
-        run: >-
-          sfdx force:source:deploy -x ${{env.PACKAGEXML_FILE}} --postdestructivechanges destructiveChanges/destructiveChanges.xml -u
-          ${{env.SF_USERNAME}} -l RunSpecifiedTests  -r ${{steps.testclass.outputs.content}} -w 10000 --checkonly --verbose --loglevel fatal 
-
-      - name: Deploy all local test classes no destructiveChanges
-        if: >-
-          ${{(env.ARCHIVE_DESTRUCTIVE_CHANGES == 'false') && 
-          (env.DEPLOY_CHANGES == 'true') && (
-          (steps.last_successful_commit.outputs.commit_hash == '') || 
-          (steps.testclass.outputs.content == ''))}}
-        shell: bash
-        env:
-          SFDX_DISABLE_DNS_CHECK: true
-        run: >-
-          sfdx force:source:deploy -x ${{env.PACKAGEXML_FILE}} -u
-          ${{env.SF_USERNAME}} -l RunLocalTests -w 10000 --verbose --loglevel fatal
-
-      - name: Deploy all local test classes with destructiveChanges
-        if: >-
-          ${{(env.ARCHIVE_DESTRUCTIVE_CHANGES == 'true') && 
-          (env.DEPLOY_CHANGES == 'true') && (
-          (steps.last_successful_commit.outputs.commit_hash == '') || 
-          (steps.testclass.outputs.content == ''))}}
-        shell: bash
-        env:
-          SFDX_DISABLE_DNS_CHECK: true
-        run: >-
-          sfdx force:source:deploy -x ${{env.PACKAGEXML_FILE}} --postdestructivechanges destructiveChanges/destructiveChanges.xml -u
-          ${{env.SF_USERNAME}} -l RunLocalTests -w 10000 --verbose --loglevel fatal
-
-      - name: Deploy with specific test classes
-        if: >-
-          ${{(steps.testclass.outputs.content != '0') &&
-          (steps.testclass.outputs.content != '-1') &&
-          (steps.testclass.outputs.content != null)}}
-        id: deployWithTestClasses
-        shell: bash
-        env:
-          SFDX_DISABLE_DNS_CHECK: true
-        run: >-
-          sfdx force:source:deploy -x ${{env.PACKAGEXML_FILE}} -l
-          RunSpecifiedTests  -r ${{steps.testclass.outputs.content}} -u
-          ${{env.SF_USERNAME}} -w 10000 --verbose --loglevel fatal
+          sf project deploy start -x ${{env.PACKAGEXML_FILE}} 
+          -l NoTestRun -o ${{env.SF_USERNAME}} -w 10000 --verbose
