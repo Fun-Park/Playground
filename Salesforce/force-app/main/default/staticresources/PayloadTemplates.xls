@@ -1,0 +1,7 @@
+Id,Name,DirectDebit__c,MasterRecTypeID__c,Message_GUID__c,MessagePayloadRecTypeID__c,Number_of_Headers__c,Number_of_Lines__c,Number_of_Messages__c,Template_ID__c
+a26p00000006JK7AAM,ClaimRecoveries,FALSE, ,<d69177e9-270a-4030-8a38-354a4d8ca955@PRDIS03.qbsa.local>, ,2,2,1,ClaimRecoveries
+a26p000000099ZhAAI,ClaimApproval,FALSE,012p00000008b0x,<191ee66b-bd50-4744-8664-9ab8a0f7d1a9@PRDIS03.qbsa.local>,012p00000008b12,1,2,3,ClaimApproval
+a26p00000006JPZAA2,ChartofAccount,FALSE, ,<136d4565-3196-4cf3-ae2d-58f041d96f9c@TRNIS03.qbsa.local>, ,1,0,1,ChartofAccount
+a26p00000005l5eAAA,DisputePurchaseOrder,FALSE, ,<c5a73019-8008-4b5c-b49e-df7d30a95177@PRDIS03.qbsa.local>, ,1,2,1,1-DisputePurchaseOrder
+a26p0000000977TAAQ,ClaimsInvoice,FALSE,012p00000008b0x,<d49f55ee-3add-4903-a53f-0c4256573768@PRDIS03.qbsa.local>,012p00000008b12,1,2,3,1-ClaimsApproval
+a26p0000000977YAAQ,ClaimsDispute,FALSE,012p00000008b0x,<c5a73019-8008-4b5c-b49e-df7d30a95177@PRDIS03.qbsa.local>,012p00000008b12,1,2,2,2-ClaimsDispute

@@ -1,0 +1,996 @@
+/* ******************************************** */
+/* General Styles								*/
+/* ******************************************** */
+
+/*  Set up the base pdf styling */
+@page {
+    size: A4;
+    margin: 15mm;
+}
+
+/*  Attempts to stop elements from being split
+	by a page break.  Note that the flying saucer
+	manual states:
+	"If a rule cannot be satisfied (e.g. a
+	&lt;div style="page-break-inside: avoid;"&gt; spans
+	three pages), the rule is simply dropped as
+	if it never existed."
+ */
+.avoidBreakInside {
+    /* Depreciated tag, but required for CSS2.1 */
+    page-break-inside: avoid !important;
+    max-width: 100%;
+}
+
+/*	Normalize the box model to that of CSS2.1. */
+* {
+    box-sizing: content-box !important;
+}
+
+body {
+    font-family: "Source Sans Pro", "Helvetica", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+
+h1, h2 {
+    display: block;
+    color: #017faa;
+    font-family: "Montserrat", "Arial", sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 24px;
+}
+
+/* Matches h2 heading in form framework */
+h2.subHeading {
+    font-size: 20px;
+    color: #333333;
+}
+
+hr {
+    display: block;
+    border-top: 2px solid transparent;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    /*  Margin and padding to stop margin collapse. */
+    padding: 6px 0 6px 0;
+    margin: 32px 0 16px 0;
+}
+
+h3.formHeader {
+    font-size: 1.3em;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+hr.formHeader {
+    border-top: 2px solid rgb(196, 198, 202);
+    padding: 0;
+    margin: 16px 0 32px 0;
+}
+
+.highlightedSection {
+    /* slds - $color-background-backdrop-tint - PALETTE_GRAY_2 */
+    background-color: rgb(250, 250, 249) !important;
+}
+
+.breakPageBefore {
+    page-break-before: always;
+}
+
+/*  Make the "non-pdf" display look like
+	a pdf for testing and debugging. */
+@media only screen {
+    html {
+        width: 210mm !important;
+        max-width: 210mm !important;
+        min-height: 100%;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #aaa
+    }
+
+    body {
+        background-color: #fff;
+        padding: 12px 65px 125px 65px;
+        border: 1px solid #999;
+        box-shadow: 0 0 15px 6px rgba(64, 64, 64, 0.6);
+    }
+
+    .width100 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    div,
+    span {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    body {
+        padding-right: 65px;
+        padding-left: 65px;
+    }
+}
+
+
+/* ******************************************** */
+/* MyQBCC Form Layout							*/
+/* ******************************************** */
+/*  Main layout container */
+.myQBCC-form-layout {
+    width: 100%;
+    max-width: 100%;
+    margin: -12px -6px;
+    padding-top: 12px;
+}
+
+/*	Clear fix as a flex work-around */
+.myQBCC-form-layout::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+/*	Deal with nested layouts  */
+.myQBCC-form-layout .myQBCC-form-layout {
+    padding: 0;
+    margin: 0;
+}
+
+/*  Base layout item */
+.myQBCC-form-layout > .myQBCC-form-layout__item {
+    position: relative;
+    display: table;
+    /* A hack to work around the lack of border-box */
+    table-layout: fixed;
+    float: left;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 0;
+}
+
+/* A hack to work around the lack of border-box */
+.myQBCC-form-layout > .myQBCC-form-layout__item::before,
+.myQBCC-form-layout > .myQBCC-form-layout__item::after {
+    position: relative;
+    display: table-cell;
+    content: "";
+    height: 1px;
+    width: 6px;
+}
+
+/*  A hack to work around the lack of border-box.  This
+    imposes the limitation that each layout item will
+    need a single inner div to maintain layout. */
+.myQBCC-form-layout > .myQBCC-form-layout__item > div,
+.myQBCC-form-layout > .myQBCC-form-layout__item > span {
+    display: table-cell;
+    width: 100%;
+}
+
+/*  Form item padding */
+.myQBCC-form-layout > .myQBCC-form-layout__item__padding {
+    padding: 12px;
+}
+
+/*	A table for advanced sizing options.  Use colgroup and col
+	to define column widths. */
+.myQBCC-form-layout__item > table,
+table.myQBCC-form-layout__item {
+    border-collapse: separate;
+    border-spacing: 3px 0;
+    /* 	An additional -6px margin is applied in this scenario to
+        align the table while providing the correct inter-cell
+        spacing. */
+    margin: 0 -6px;
+    width: 100%;
+}
+
+.myQBCC-form-layout__item > table td,
+table.myQBCC-form-layout__item td {
+    padding: 0;
+}
+
+div.condensed div.myQBCC-form-layout {
+    padding-top: 3px;
+}
+
+div.condensed .myQBCC-form-layout > .myQBCC-form-layout__item {
+    padding: 6px 0;
+}
+
+/*  Fieldset labels */
+/*	Don't use a fieldset or a legend tag here, as it
+	will not work.  Instead, use the `c:MyQBCCFormLabel`
+	component. */
+.myQBCC-form-label {
+    display: block !important;
+    width: 100%;
+    max-width: 100%;
+}
+
+.myQBCC-form-label.hasSpacing {
+    padding: 32px 6px 6px 6px !important;
+}
+
+.condensed .myQBCC-form-label.hasSpacing {
+    padding: 14px 6px 6px 6px !important;
+}
+
+/*  Do not make the "required star" bold. */
+.myQBCC-form-label abbr {
+    font-weight: initial;
+    color: rgb(194, 57, 52) !important;
+}
+
+/*  Form sections and spacing */
+.myQBCC-form-layout > .myQBCC-form__space,
+.myQBCC-form-layout > hr {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    margin: 12px 6px;
+}
+
+/*  1 Column layout */
+.myQBCC-form-layout[data-columns="1"] > .myQBCC-form-layout__item,
+.myQBCC-form-layout > .myQBCC-form-layout__item[data-columns="1"] {
+    width: 100%;
+    max-width: 100%;
+}
+
+/*  2 Column layout */
+.myQBCC-form-layout[data-columns="2"] > .myQBCC-form-layout__item,
+.myQBCC-form-layout > .myQBCC-form-layout__item[data-columns="2"] {
+    width: 50%;
+    max-width: 100%;
+}
+
+/*  3 Column layout */
+.myQBCC-form-layout[data-columns="3"] > .myQBCC-form-layout__item,
+.myQBCC-form-layout > .myQBCC-form-layout__item[data-columns="3"] {
+    width: 33.333%;
+    max-width: 33.333%;
+}
+
+
+/* ******************************************** */
+/* FIELD STYLING								*/
+/* ******************************************** */
+.fieldContainer {
+    /*  This is important, as otherwise the color
+        is stripped during pdf render */
+    background-color: rgb(233, 234, 236) !important;
+    border: 1px solid rgb(196, 198, 202);
+    /* border-radius: 3px;  This cannot work as it was
+       introduced in CSS3.  No suitable polyfill. */
+    line-height: 40px;
+    color: #545d5d;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.fieldContainer_empty {
+    color: #ccc;
+}
+
+.fieldContainer.noOverflow {
+    overflow: hidden;
+}
+
+.fieldContainer > div,
+.fieldContainer:not(.fieldContainer_empty) > span {
+    line-height: 20px;
+}
+
+.fieldLabel {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 8px;
+}
+
+.errorMessage,
+.errorMessage i,
+.errorMessage code,
+.fieldLabel abbr {
+    color: rgb(194, 57, 52) !important;
+}
+
+.checkboxField .checkBoxFauxCell {
+    vertical-align: top;
+}
+
+.checkboxField .checkBoxLabelCell {
+    padding-top: 3px;
+}
+
+/* Checkboxes */
+.fauxCheckbox {
+    display: inline-block;
+
+    position: relative;
+    /*  This is required to maintain consistency between screen
+        and pdf. */
+    box-sizing: content-box;
+    height: 16px;
+    width: 16px;
+}
+
+.fauxCheckbox::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    box-sizing: content-box;
+    /*  14px plus 2 x 1px border = 16px */
+    height: 14px;
+    width: 14px;
+    border: 1px solid rgb(196, 198, 202);
+    background-color: rgb(233, 234, 236) !important;
+}
+
+.fauxCheckbox img {
+    box-sizing: content-box;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.fauxCheckbox + .fieldLabel {
+    display: inline-block;
+    padding-bottom: 0;
+    padding-left: 4px;
+}
+
+.checkboxField + .checkboxField {
+    margin-top: 8px;
+}
+
+.MyQBCCFormFieldGroup .checkboxField + .checkboxField {
+    margin: 0;
+}
+
+.inlineCheckbox {
+    table-layout: auto;
+}
+
+.inlineCheckbox td + td {
+    padding-left: 8px;
+}
+
+
+/* ******************************************** */
+/* MyQBCCFormFileUploadList						*/
+/* ******************************************** */
+.fileUploadList {
+    border: 1px solid rgb(196, 198, 202);
+}
+
+.fileUploadList .listHeader {
+    display: block;
+    margin: 0;
+    padding: 8px;
+    background-color: rgb(233, 234, 236) !important;
+    border-bottom: 1px solid rgb(196, 198, 202);
+}
+
+.fileUploadList table caption {
+    text-align: left;
+    padding: 8px;
+}
+
+.fileUploadList table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.fileUploadList table,
+.fileUploadList table td,
+.fileUploadList table th {
+    padding: 8px;
+}
+
+.fileUploadList thead th {
+    word-break: break-word;
+    white-space: normal;
+    border-top: 1px solid rgb(196, 198, 202);
+    border-bottom: 1px solid rgb(196, 198, 202);
+}
+
+.fileUploadList thead tr {
+    background-color: rgb(233, 234, 236) !important;
+}
+
+.fileUploadList thead tr th {
+    width: auto;
+}
+
+.fileUploadList thead tr th:last-of-type {
+    width: 50%;
+}
+
+.fileUploadList__file {
+    padding-bottom: 4px;
+    word-break: break-word;
+}
+
+.fileUploadList__file:last-of-type {
+    padding-bottom: 0;
+}
+
+
+/* ******************************************** */
+/* SLDS SPACING POLYFILL						*/
+/* ******************************************** */
+.slds-m-top_none {
+    margin-top: 0 !important;
+}
+
+.slds-m-top_xxx-small {
+    margin-top: 2px;
+}
+
+.slds-m-top_xx-small {
+    margin-top: 4px;
+}
+
+.slds-m-top_x-small {
+    margin-top: 8px;
+}
+
+.slds-m-top_small {
+    margin-top: 12px;
+}
+
+.slds-m-top_medium {
+    margin-top: 16px;
+}
+
+.slds-m-top_large {
+    margin-top: 24px;
+}
+
+.slds-m-top_x-large {
+    margin-top: 32px;
+}
+
+.slds-m-top_xx-large {
+    margin-top: 48px;
+}
+
+.slds-m-right_none {
+    margin-right: 0 !important;
+}
+
+.slds-m-right_xxx-small {
+    margin-right: 2px;
+}
+
+.slds-m-right_xx-small {
+    margin-right: 4px;
+}
+
+.slds-m-right_x-small {
+    margin-right: 8px;
+}
+
+.slds-m-right_small {
+    margin-right: 12px;
+}
+
+.slds-m-right_medium {
+    margin-right: 16px;
+}
+
+.slds-m-right_large {
+    margin-right: 24px;
+}
+
+.slds-m-right_x-large {
+    margin-right: 32px;
+}
+
+.slds-m-right_xx-large {
+    margin-right: 48px;
+}
+
+.slds-m-bottom_none {
+    margin-bottom: 0 !important;
+}
+
+.slds-m-bottom_xxx-small {
+    margin-bottom: 2px;
+}
+
+.slds-m-bottom_xx-small {
+    margin-bottom: 4px;
+}
+
+.slds-m-bottom_x-small {
+    margin-bottom: 8px;
+}
+
+.slds-m-bottom_small {
+    margin-bottom: 12px;
+}
+
+.slds-m-bottom_medium {
+    margin-bottom: 16px;
+}
+
+.slds-m-bottom_large {
+    margin-bottom: 24px;
+}
+
+.slds-m-bottom_x-large {
+    margin-bottom: 32px;
+}
+
+.slds-m-bottom_xx-large {
+    margin-bottom: 48px;
+}
+
+.slds-m-left_none {
+    margin-left: 0 !important;
+}
+
+.slds-m-left_xxx-small {
+    margin-left: 2px;
+}
+
+.slds-m-left_xx-small {
+    margin-left: 4px;
+}
+
+.slds-m-left_x-small {
+    margin-left: 8px;
+}
+
+.slds-m-left_small {
+    margin-left: 12px;
+}
+
+.slds-m-left_medium {
+    margin-left: 16px;
+}
+
+.slds-m-left_large {
+    margin-left: 24px;
+}
+
+.slds-m-left_x-large {
+    margin-left: 32px;
+}
+
+.slds-m-left_xx-large {
+    margin-left: 48px;
+}
+
+.slds-m-horizontal_none {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.slds-m-horizontal_xxx-small {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.slds-m-horizontal_xx-small {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.slds-m-horizontal_x-small {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.slds-m-horizontal_small {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.slds-m-horizontal_medium {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.slds-m-horizontal_large {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.slds-m-horizontal_x-large {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.slds-m-horizontal_xx-large {
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+.slds-m-vertical_none {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.slds-m-vertical_xxx-small {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.slds-m-vertical_xx-small {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.slds-m-vertical_x-small {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.slds-m-vertical_small {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.slds-m-vertical_medium {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.slds-m-vertical_large {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.slds-m-vertical_x-large {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.slds-m-vertical_xx-large {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.slds-m-around_none {
+    margin: 0 !important;
+}
+
+.slds-m-around_xxx-small {
+    margin: 2px;
+}
+
+.slds-m-around_xx-small {
+    margin: 4px;
+}
+
+.slds-m-around_x-small {
+    margin: 8px;
+}
+
+.slds-m-around_small {
+    margin: 12px;
+}
+
+.slds-m-around_medium {
+    margin: 16px;
+}
+
+.slds-m-around_large {
+    margin: 24px;
+}
+
+.slds-m-around_x-large {
+    margin: 32px;
+}
+
+.slds-m-around_xx-large {
+    margin: 48px;
+}
+
+.slds-p-top_none {
+    padding-top: 0 !important;
+}
+
+.slds-p-top_xxx-small {
+    padding-top: 2px;
+}
+
+.slds-p-top_xx-small {
+    padding-top: 4px;
+}
+
+.slds-p-top_x-small {
+    padding-top: 8px;
+}
+
+.slds-p-top_small {
+    padding-top: 12px;
+}
+
+.slds-p-top_medium {
+    padding-top: 16px;
+}
+
+.slds-p-top_large {
+    padding-top: 24px;
+}
+
+.slds-p-top_x-large {
+    padding-top: 32px;
+}
+
+.slds-p-top_xx-large {
+    padding-top: 48px;
+}
+
+.slds-p-right_none {
+    padding-right: 0 !important;
+}
+
+.slds-p-right_xxx-small {
+    padding-right: 2px;
+}
+
+.slds-p-right_xx-small {
+    padding-right: 4px;
+}
+
+.slds-p-right_x-small {
+    padding-right: 8px;
+}
+
+.slds-p-right_small {
+    padding-right: 12px;
+}
+
+.slds-p-right_medium {
+    padding-right: 16px;
+}
+
+.slds-p-right_large {
+    padding-right: 24px;
+}
+
+.slds-p-right_x-large {
+    padding-right: 32px;
+}
+
+.slds-p-right_xx-large {
+    padding-right: 48px;
+}
+
+.slds-p-bottom_none {
+    padding-bottom: 0 !important;
+}
+
+.slds-p-bottom_xxx-small {
+    padding-bottom: 2px;
+}
+
+.slds-p-bottom_xx-small {
+    padding-bottom: 4px;
+}
+
+.slds-p-bottom_x-small {
+    padding-bottom: 8px;
+}
+
+.slds-p-bottom_small {
+    padding-bottom: 12px;
+}
+
+.slds-p-bottom_medium {
+    padding-bottom: 16px;
+}
+
+.slds-p-bottom_large {
+    padding-bottom: 24px;
+}
+
+.slds-p-bottom_x-large {
+    padding-bottom: 32px;
+}
+
+.slds-p-bottom_xx-large {
+    padding-bottom: 48px;
+}
+
+.slds-p-left_none {
+    padding-left: 0 !important;
+}
+
+.slds-p-left_xxx-small {
+    padding-left: 2px;
+}
+
+.slds-p-left_xx-small {
+    padding-left: 4px;
+}
+
+.slds-p-left_x-small {
+    padding-left: 8px;
+}
+
+.slds-p-left_small {
+    padding-left: 12px;
+}
+
+.slds-p-left_medium {
+    padding-left: 16px;
+}
+
+.slds-p-left_large {
+    padding-left: 24px;
+}
+
+.slds-p-left_x-large {
+    padding-left: 32px;
+}
+
+.slds-p-left_xx-large {
+    padding-left: 48px;
+}
+
+.slds-p-horizontal_none {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.slds-p-horizontal_xxx-small {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.slds-p-horizontal_xx-small {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.slds-p-horizontal_x-small {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.slds-p-horizontal_small {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.slds-p-horizontal_medium {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.slds-p-horizontal_large {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.slds-p-horizontal_x-large {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.slds-p-horizontal_xx-large {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.slds-p-vertical_none {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.slds-p-vertical_xxx-small {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.slds-p-vertical_xx-small {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.slds-p-vertical_x-small {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.slds-p-vertical_small {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.slds-p-vertical_medium {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.slds-p-vertical_large {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.slds-p-vertical_x-large {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.slds-p-vertical_xx-large {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.slds-p-around_none {
+    padding: 0 !important;
+}
+
+.slds-p-around_xxx-small {
+    padding: 2px;
+}
+
+.slds-p-around_xx-small {
+    padding: 4px;
+}
+
+.slds-p-around_x-small {
+    padding: 8px;
+}
+
+.slds-p-around_small {
+    padding: 12px;
+}
+
+.slds-p-around_medium {
+    padding: 16px;
+}
+
+.slds-p-around_large {
+    padding: 24px;
+}
+
+.slds-p-around_x-large {
+    padding: 32px;
+}
+
+.slds-p-around_xx-large {
+    padding: 48px;
+}
+
+.slds-box {
+    padding: 10px !important;
+    border-radius: 4em;
+    border: 1px solid #d8dde6;
+}
+
+.slds-theme_shade {
+    background-color: rgb(243, 243, 243);
+}
+
+.slds-hide {
+    display: none !important;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Private</cacheControl>
+    <contentType>text/csv</contentType>
+    <description>Dependent Picklist Options for NWIG-1.
+UTF-8 CSV with field name headers only. 
+For SOQL query to generate, see NWIG-16.</description>
+</StaticResource>

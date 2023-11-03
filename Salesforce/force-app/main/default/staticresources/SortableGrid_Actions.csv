@@ -1,0 +1,20 @@
+Name,sortablegrid__Action_Order__c,sortablegrid__Action_Type__c,sortablegrid__Event__c,sortablegrid__Event_Payload__c,sortablegrid__Icon__c,sortablegrid__Requires_Createable__c,sortablegrid__Requires_Deletable__c,sortablegrid__Requires_Editable__c,sortablegridName
+New Relationship,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Relationship__c"", ""defaultFieldValues"":{""Main_Participant__c"":""#parentrecordId#""}}",,true,false,false,Insolvencies Active
+New Relationship,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Relationship__c"", ""defaultFieldValues"":{""Secondary_Participant__c"":""#parentrecordId#""}}",,true,false,false,Secondary Relationships
+New Relationship,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Relationship__c"", ""defaultFieldValues"":{""Secondary_Participant__c"":""#parentrecordId#""}}",,true,false,false,Secondary Insolvencies Active
+New,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Trust_Notification__c"",""recordTypeId"" : ""0122e0000004OilAAE"",""defaultFieldValues"":{""Trust_Account__c"":""#parentrecordId#""}}",,true,false,false,Insufficient Payment Notifications
+Edit,1.0,Row Button,e.force:editRecord,"{""recordId"":""#Id#""}",,false,false,true,Insufficient Payment Notifications
+Delete,2.0,Row Button,Internal,"{""Action"":""Delete"",""sObjectID"":""#Id#""}",,false,true,false,Insufficient Payment Notifications
+New,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Trust_Notification__c"",""recordTypeId"" : ""0122e0000004OXjAAM"",""defaultFieldValues"":{""Trust_Account__c"":""#parentrecordId#""}}",,true,false,false,Trust Review Events
+Edit,1.0,Row Button,e.force:editRecord,"{""recordId"":""#Id#""}",,false,false,true,Trust Review Events
+Delete,2.0,Row Button,Internal,"{""Action"":""Delete"",""sObjectID"":""#Id#""}",,false,true,false,Trust Review Events
+New,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Trust_Notification__c"",""recordTypeId"" : ""0122e0000004NmSAAU"",""defaultFieldValues"":{""Trust_Account__c"":""#parentrecordId#""}}",,true,false,false,Related Entity Notifications
+Edit,1.0,Row Button,e.force:editRecord,"{""recordId"":""#Id#""}",,false,false,true,Related Entity Notifications
+Delete,2.0,Row Button,Internal,"{""Action"":""Delete"",""sObjectID"":""#Id#""}",,false,true,false,Related Entity Notifications
+New Review,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Trust_Notification__c"",""recordTypeId"" : ""0122e0000004OXiAAM"",""defaultFieldValues"":{""Trust_Account__c"":""#parentrecordId#""}}",,true,false,false,Trust Reviews
+New Exemption,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Trust_Notification__c"",""recordTypeId"" : ""0122e0000004PVAAA2"",""defaultFieldValues"":{""Trust_Account__c"":""#parentrecordId#""}}",,true,false,false,Trust Reviews
+Edit,1.0,Row Button,e.force:editRecord,"{""recordId"":""#Id#""}",,false,false,true,Trust Reviews
+Delete,2.0,Row Button,e.c:recordDeleteHandlerEvent,"{""recordId"":""#Id#""}",,false,true,false,Trust Reviews
+New,1.0,List Button,e.force:createRecord,"{""entityApiName"": ""Trust_Notification__c"",""recordTypeId"" : ""0122e0000004O6rAAE"",""defaultFieldValues"":{""Trust_Account__c"":""#parentrecordId#""}}",,true,false,false,Trust Admin and Training Notifications
+Edit,1.0,Row Button,e.force:editRecord,"{""recordId"":""#Id#""}",,false,false,true,Trust Admin and Training Notifications
+Delete,2.0,Row Button,Internal,"{""Action"":""Delete"",""sObjectID"":""#Id#""}",,false,true,false,Trust Admin and Training Notifications

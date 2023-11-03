@@ -1,0 +1,191 @@
+
+.errorSummary {
+overflow: auto;
+padding-bottom: 0px;
+width: 100%;
+}
+
+.warningIcon {
+margin-left: 20px;
+margin-bottom: 0px;
+border-right: 1px solid #E2E0DA;
+width: 50px;
+height: 40px;
+margin-top: 4px;
+padding-top: 10px;
+float: left;
+}
+
+.infoContent {
+height: 60px;
+-webkit-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-bottom: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-right: 1px solid #CCC;
+border-left: 1px solid #CCC;
+background-color: rgb(248,248,248)
+}
+
+
+.warningContent {
+height: 60px;
+-webkit-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-bottom: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-right: 1px solid #CCC;
+border-left: 1px solid #CCC;
+background-color: rgb(255, 254, 221)
+}
+
+
+.stopContent {
+height: 60px;
+-webkit-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-bottom: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-right: 1px solid #CCC;
+border-left: 1px solid #CCC;
+background-color: #FFECEC
+}
+
+
+.quickStartContent {
+height: 25px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-right: 1px solid #CCC;
+border-left: 1px solid #CCC;
+background: transparent url('/img/alohaSkin/metaBar_sprite.png') left -104px repeat-x;
+font-size: 0.9em;
+}
+
+
+.panelHeader {
+padding-left: 10px;
+font-weight:normal
+}
+
+.errorSummaryText {
+width: 85%;
+color: #222;
+margin-top: 1px;
+padding-left: 10px;
+float: left;
+font-weight: bold;
+}
+
+.warningSummaryText {
+width: 85%;
+color: #222;
+margin-top: 1px;
+padding-left: 10px;
+float: left;
+}
+
+.infoSummaryText {
+width: 85%;
+color: #222;
+margin-top: 1px;
+padding-left: 10px;
+padding-top: 20px;
+float: left;
+}
+
+.integrationErrorSummaryText {
+width: 85%;
+color: #222;
+margin-top: 1px;
+padding-left: 10px;
+padding-top: 10px;
+font-weight: bold;
+float: left;
+}
+
+.headerContent {
+-webkit-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-bottom: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-right: 1px solid #CCC;
+border-left: 1px solid #CCC;
+-background-color: rgb(255, 254, 221)
+}
+
+.headerSummary {
+overflow: auto;
+padding-bottom: 0px;
+width: 100%;
+}
+
+.headerSummaryText {
+color: #222;
+margin-top: 1px;
+padding-left: 10px;
+float: left;
+font-size: 0.9em;
+font-weight: bold;
+}
+
+#ticker {
+    width: 99.85%;
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+
+}
+
+#ticker li {
+height: 15px;
+border-bottom: 1px dotted
+#DDD;
+padding: 2px;
+margin: 0px 5px;
+}
+
+
+#tickerstatic {
+    width: 99.85%;
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+
+}
+
+#tickerstatic li {
+height: 15px;
+border-bottom: 1px dotted
+#DDD;
+padding: 2px;
+margin: 0px 5px;
+vertical-align: top;
+}

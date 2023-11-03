@@ -1,0 +1,18 @@
+@media print {
+
+    .viewport > .layoutContent {
+        top: 0 !important;
+    }
+
+    .oneAppNavContainer {
+        display: none;
+    }
+
+    .slds-global-header_container {
+        display: none !important;
+    }
+
+    .forceToastManager {
+        display: none;
+    }
+}

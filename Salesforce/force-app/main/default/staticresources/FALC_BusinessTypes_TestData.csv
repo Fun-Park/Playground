@@ -1,0 +1,34 @@
+Active__c,Code__c,Name,Display_Order__c
+TRUE,HYDL,Hydraulic Services Design,13
+TRUE,ACON,Air Con & Refrigeration,5
+TRUE,BRKL,Bricklaying,6
+TRUE,BLDR,Builders,1
+TRUE,BLDRIN,Building Inspectors,3
+TRUE,CARP,Carpenters,7
+TRUE,CSPM,Client Side Project Managers,4
+TRUE,CONC,Concretors,8
+TRUE,DSGN,Designers,2
+TRUE,FIRE,Fire Services,29
+TRUE,FLOR,Flooring,9
+TRUE,GSFT,Gasfitting,10
+TRUE,GLGL,Glass & Glazing,11
+TRUE,GUTR,Guttering,12
+TRUE,KTCH,Kitchens,14
+TRUE,LSCS,Landscaping (Structural),15
+TRUE,PNTG,Painting,16
+TRUE,PAVG,Paving,17
+TRUE,PSTC,Pest Control (Termites),18
+TRUE,PLAS,Plastering,19
+TRUE,PLMB,Plumbing and Drainage,20
+TRUE,RARR,Roofs and Roof Restoration,21
+TRUE,SCAG,Screens & Grilles,22
+TRUE,SHSL,Shade Sails,23
+TRUE,SHED,Sheds,24
+TRUE,SHFT,Shop fitting,30
+TRUE,SOIL,Soil Testing,25
+TRUE,STMY,Stone Masonry,32
+TRUE,STST,Structural Steel,31
+TRUE,SWPL,Swimming Pools,26
+TRUE,TILE,Tiling,27
+TRUE,WTRP,Waterproofing,28
+

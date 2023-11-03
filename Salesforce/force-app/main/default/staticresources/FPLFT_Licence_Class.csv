@@ -1,0 +1,41 @@
+Code__c,FPLFT_Stream__c,FPLFT_Class__c
+FFSP,Fire safety professional,Fire safety professional
+FOSP,Fire safety professional,Fire safety professional
+FPSC,Passive,Certify
+FPSDIM,Passive,Install and maintain - Fire doors and fire shutters
+FPSPIM,Passive,"Install and maintain - Fire collars, fire-rated penetrations and fire-rated joint sealing"
+FPSWIM,Passive,Install and maintain - Fire and smoke walls and fire-rated ceilings
+FPSIT,Passive,Inspect and test
+FSHC,Special hazard fire system,Certify
+FSHIM,Special hazard fire system,Install and maintain
+FWD,Water-based fire system,Design
+FWC,Water-based fire system,Certify
+FWIM,Water-based fire system,Install and maintain
+FWCIIM,Water-based fire system,Install and maintain - Restricted to commercial and industrial types
+FWDRIM,Water-based fire system,Install and maintain - Restricted to domestic and residential types
+FPTC,Portables,Certify
+FPTIM,Portables,Install and maintain
+FEAD,Electrical,Design - Fire alarm systems
+FEAC,Electrical,Certify - Fire alarm systems
+FELC,Electrical,Certify - Emergency lighting
+FEAIM,Electrical,Install and maintain - Fire alarm systems
+FELIT,Electrical,Inspect and test - Emergency lighting
+FPSOC,Passive,Certify
+FPSODIM,Passive,Install and maintain - Fire doors and fire shutters
+FPSOPIM,Passive,"Install and maintain - Fire collars, fire-rated penetrations and fire-rated joint sealing"
+FPSOWIM,Passive,Install and maintain - Fire and smoke walls and fire-rated ceilings
+FPSOIT,Passive,Inspect and test
+FSHOC,Special hazard fire system,Certify
+FSHOIM,Special hazard fire system,Install and maintain
+FWOD,Water-based fire system,Design
+FWOC,Water-based fire system,Certify
+FWOIM,Water-based fire system,Install and maintain
+FWOCIIM,Water-based fire system,Install and maintain - Restricted to commercial and industrial types
+FWODRIM,Water-based fire system,Install and maintain - Restricted to domestic and residential types
+FPTOC,Portables,Certify
+FPTOIM,Portables,Install and maintain
+FEOAD,Electrical,Design - Fire alarm systems
+FEOAC,Electrical,Certify - Fire alarm systems
+FEOLC,Electrical,Certify - Emergency lighting
+FEOAIM,Electrical,Install and maintain - Fire alarm systems
+FEOLIT,Electrical,Inspect and test - Emergency lighting

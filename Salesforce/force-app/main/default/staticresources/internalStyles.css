@@ -1,0 +1,53 @@
+/**
+    NOTE THAT THIS FILE IS NOT SCOPED!! That means styles in this sheet will affect the entire
+    internal site when loaded!
+
+    ENSURE styles are well scoped to avoid styling issues.
+
+    LWC usage example:
+
+    import {LightningElement} from "lwc";
+    import {loadStyle} from "lightning/platformResourceLoader";
+    import STYLES from "@salesforce/resourceUrl/internalStyleOverrides";
+
+    export default class MyController extends LightningElement {
+        hasConnected = false;
+        async connectedCallback() {
+            try {
+                if(this.hasConnected === false) {
+                    await loadStyle(this, STYLES);
+                    this.hasConnected = true;
+                }
+            } catch(ex) {
+                this.handleError(ex);
+            }
+        }
+    }
+
+*/
+
+/* Limits a combobox dropdown to 5 elements */
+lightning-combobox.qbcc-dropdown_length-5 .slds-dropdown {
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(((1rem * 1.5) + 1rem) * 5);
+    overflow-y: auto;
+}
+
+lightning-combobox.qbcc-dropdown_length-with-icon-5 .slds-dropdown {
+    -webkit-overflow-scrolling: touch;
+    max-height: calc((1.5rem + 1rem) * 5);
+    overflow-y: auto;
+}
+
+/* Limits a combobox dropdown to 7 elements */
+lightning-combobox.qbcc-dropdown_length-7 .slds-dropdown {
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(((1rem * 1.5) + 1rem) * 7);
+    overflow-y: auto;
+}
+
+lightning-combobox.qbcc-dropdown_length-with-icon-7 .slds-dropdown {
+    -webkit-overflow-scrolling: touch;
+    max-height: calc((1.5rem + 1rem) * 7);
+    overflow-y: auto;
+}

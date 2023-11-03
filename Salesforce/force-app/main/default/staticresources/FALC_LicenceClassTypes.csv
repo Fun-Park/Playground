@@ -1,0 +1,113 @@
+Business Type,Licence Class Type Code,Licence Class Type Decription,Active
+Air Con & Refrigeration,AHD,Air Handling Duct Installation,TRUE
+Air Con & Refrigeration,RAMP,"Refrigeration, Airconditioning And Mechanical Services Restricted To Multipackaged Residential Airconditioning Equipment And Plant",TRUE
+Air Con & Refrigeration,RARE,"Refrigeration, Airconditioning And Mechanical Services Restricted To Residential Evaporative Cooling Equipment",TRUE
+Air Con & Refrigeration,RASC,"Refrigeration, Airconditioning And Mechanical Services Restricted To Self-Contained Window Package Residential Airconditioning Installation",TRUE
+Air Con & Refrigeration,RALD,"Refrigeration, Airconditioning and Mechanical Services Including Limited Design",TRUE
+Air Con & Refrigeration,RAUD,"Refrigeration, Airconditioning and Mechanical Services Including Unlimited Design",TRUE
+Bricklaying,BBL,Bricklaying Restricted To Blocklaying,TRUE
+Bricklaying,BLB,Bricklaying and Blocklaying,TRUE
+Builders,BLR,Builder - Low Rise,TRUE
+Builders,BMR,Builder - Medium Rise,TRUE
+Builders,BO,Builder - Open,TRUE
+Builders,BRKB,"Builder Restricted to Kitchen, Bathroom and Laundry Installation",TRUE
+Builders,BRSF,Builder Restricted to Shopfitting,TRUE
+Builders,BRSS,Builder Restricted to Special Structures,TRUE
+Builders,BRSL,Builder Restricted to Structural Landscaping,TRUE
+Builders,RRW,Building Restricted Renovations - Wet Areas,TRUE
+Builders,AA,Building Restricted To Alterations And Additions,TRUE
+Builders,BR,Building Restricted To Building Removal,TRUE
+Builders,EF,Building Restricted To External Finishes,TRUE
+Builders,NSR,Building Restricted To Non Structural Renovations,TRUE
+Builders,RR,"Building Restricted To Renovations, Repairs And Maintenance",TRUE
+Builders,RM,Building Restricted To Repairs And Maintenance,TRUE
+Building Inspectors,CRBI,Completed Residential Building Inspection,TRUE
+Carpenters,CM,Cabinet Making,TRUE
+Carpenters,CP,Carpentry,TRUE
+Carpenters,CF,Carpentry (Formwork),TRUE
+Carpenters,CJF,Carpentry Restricted To Framing,TRUE
+Carpenters,CJI,Carpentry Restricted To Internal Finishes,TRUE
+Carpenters,CJL,Carpentry Restricted To Lattice And Other Timber Work,TRUE
+Carpenters,CJO,Carpentry Restricted To Outdoor Construction,TRUE
+Carpenters,JN,Joinery,TRUE
+Client Side Project Managers,BPMS,Builder - Project Management Services,TRUE
+Concretors,CON,Concreting,TRUE
+Concretors,COR,Concreting Restricted To Concrete Repairs,TRUE
+Concretors,COL,Concreting Restricted To Light Concreting,TRUE
+Concretors,COLM,Concreting Restricted To Minor Concrete Work,TRUE
+Concretors,COS,Concreting Restricted To Special Finishes,TRUE
+Concretors,COU,Concreting Restricted To Underpinning And Foundation Repair,TRUE
+Concretors,FW,Foundation Work (Piling and Anchors),TRUE
+Concretors,SIF,Specialised Contracting - Screw In Foundations,TRUE
+Concretors,SFX,Steel Fixing,TRUE
+Designers,BDLR,Building Design - Low Rise,TRUE
+Designers,BDMR,Building Design - Medium Rise,TRUE
+Designers,BDO,Building Design - Open,TRUE
+Fire Services,FFEL,Emergency Lighting,TRUE
+Fire Services,FFEP,Emergency Procedures,TRUE
+Fire Services,FFDS,"Fire Detection, Alarm and Warning Systems",TRUE
+Fire Services,FFHH,Fire Hydrants and Hose Reels,TRUE
+Fire Services,FFPS,Fire Pumps,TRUE
+Fire Services,FFSP,Fire Safety Professional,TRUE
+Fire Services,FTSH,Fire Suppression Systems - Special Hazards,TRUE
+Fire Services,FFPJ,"Passive Fire Protection - Fire Collars, Penetrations and Joint Sealing",TRUE
+Fire Services,FFFD,Passive Fire Protection - Fire Doors and Shutters,TRUE
+Fire Services,FFWC,Passive Fire Protection - Fire and Smoke Walls and Ceilings,TRUE
+Fire Services,FFPE,Portable Fire Equipment and Hose Reels (Hose Reels Downstream of Stopcock Only),TRUE
+Fire Services,FFSH,Special Hazard Suppression Systems,TRUE
+Fire Services,FFSS,Sprinkler and Suppression Systems (Reticulated Water Based),TRUE
+Flooring,FCCK,Floor Finishing And Covering Restricted To Cork Flooring,TRUE
+Flooring,FCT,Floor Finishing And Covering Restricted To Floor Sanding And Finishing - Timber Floors,TRUE
+Flooring,FCFF,Floor Finishing And Covering Restricted To Install Floating Flooring,TRUE
+Flooring,FCIS,Floor Finishing And Covering Restricted To Install Strip Flooring (Non Structural),TRUE
+Flooring,FCP,Floor Finishing And Covering Restricted To Parquetry Flooring,TRUE
+Flooring,FCSF,Floor Finishing And Covering Restricted To Seamless Flooring,TRUE
+Flooring,FCHS,Floor Finishing and Covering (Hard Sector),TRUE
+Gasfitting,GFT,Gasfitting,TRUE
+Glass & Glazing,GGA,"Glass, Glazing and Aluminium",TRUE
+Guttering,MFG,Metal Fascias and Gutters,TRUE
+Hydraulic Services Design,HYSD,Hydraulic Services Design,TRUE
+Kitchens,BRKB,"Builder Restricted to Kitchen, Bathroom and Laundry Installation",TRUE
+Kitchens,CM,Cabinet Making,TRUE
+Kitchens,JN,Joinery,TRUE
+Landscaping (Structural),BRSL,Builder Restricted to Structural Landscaping,TRUE
+Landscaping (Structural),SLT,Structural Landscaping (Trade),TRUE
+Landscaping (Structural),SLF,Structural Landscaping Restricted To Fences,TRUE
+Landscaping (Structural),SLR,Structural Landscaping Restricted To Retaining Walls,TRUE
+Painting,PND,Painting Restricted To New Domestic Buildings,TRUE
+Painting,PNDR,Painting Restricted To Repainting Domestic Buildings,TRUE
+Painting,PNR,Painting Restricted To Roof Painting,TRUE
+Painting,PNS,Painting Restricted To Special Finishes,TRUE
+Painting,PNAD,Painting and Decorating,TRUE
+Paving,BSP,Brick and Segmental Paving,TRUE
+Pest Control (Termites),TMC,Termite Management - Chemical,TRUE
+Pest Control (Termites),TMP,Termite Management - Physical,TRUE
+Plastering,PDW,Plastering Drywall,TRUE
+Plastering,PLC,Plastering Drywall Restricted To Cornice Fixing,TRUE
+Plastering,PLP,Plastering Drywall Restricted To Partition Installation,TRUE
+Plastering,PLS,Plastering Drywall Restricted To Plaster Setting,TRUE
+Plastering,PLSC,Plastering Drywall Restricted To Suspended Ceiling Fixing,TRUE
+Plastering,PLW,Plastering Drywall Restricted To Wall Board Fixing,TRUE
+Plastering,PSD,Plastering Solid,TRUE
+Plumbing and Drainage,DN,Drainage,TRUE
+Plumbing and Drainage,DNS,Drainage - On-site Sewerage Facility,TRUE
+Plumbing and Drainage,IR,Irrigation,TRUE
+Plumbing and Drainage,PDP,Plumbing And Draining Restricted To Plumbing,TRUE
+Plumbing and Drainage,PDT,Plumbing And Draining Restricted To Tanks - Water Supply,TRUE
+Plumbing and Drainage,PDRW,Plumbing And Draining Restricted To Wall Cladding,TRUE
+Plumbing and Drainage,PDN,Plumbing and Drainage,TRUE
+Roofs and Roof Restoration,RTS,Plumbing And Draining Restricted To Skylight And Ventilator Installation,TRUE
+Roofs and Roof Restoration,RFT,Roof Tiling,TRUE
+Roofs and Roof Restoration,RTM,Roof Tiling Restricted To Roof Tile Maintenance,TRUE
+Roofs and Roof Restoration,RWC,Roof and Wall Cladding,TRUE
+Screens & Grilles,NSMF,Non-Structural Metal Fabrication and Installation,TRUE
+Shade Sails,BRSS,Builder Restricted to Special Structures,TRUE
+Sheds,SCG,"Sheds, Carports and Garages",TRUE
+Shop fitting,SFT,Shopfitting (Trade),TRUE
+Soil Testing,SCF,Site Classifier,TRUE
+Stone Masonry,STM,Stone Masonry,TRUE
+Structural Steel,SMF,Structural Metal Fabrication and Erection,TRUE
+Swimming Pools,SPPF,Swimming Pool And Spa Construction Restricted To Finishes,TRUE
+Swimming Pools,SPIM,"Swimming Pool Construction, Installation and Maintenance",TRUE
+Tiling,WFT,Wall and Floor Tiling,TRUE
+Waterproofing,WP,Waterproofing,TRUE

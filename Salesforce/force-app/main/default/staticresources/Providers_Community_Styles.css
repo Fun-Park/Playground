@@ -1,0 +1,193 @@
+/*noinspection CssUnknownTarget*/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap);
+
+body, p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px !important;
+    font-weight: 700;
+    color: #017faa;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px !important;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px !important;
+}
+
+a {
+    color: #008FBF;
+}
+
+*:focus {
+    outline: none;
+}
+
+*::placeholder {
+    color: #D2D4D4;
+    font-style: italic;
+}
+
+/* The top page header */
+.cViewPanel .cHeaderPanel .cHeaderLine {
+    height: 90px;
+    padding: 22px 25px;
+}
+
+@media only screen and (min-width: 1140px) {
+    .cViewPanel .cHeaderPanel .cHeaderLine {
+        max-width: 95vw;
+    }
+}
+
+.cViewPanel .cHeaderPanel .cNavBarCon .comm-navigation__list li {
+    align-self: stretch !important;
+}
+
+.cViewPanel .cHeaderPanel .cTopLeftCon svg {
+    fill: black;
+}
+
+/* Style the logo */
+.cViewPanel .cHeaderPanel .cBrandingLogo {
+	background-position: left;
+	margin-left: 1rem;
+}
+
+/* Hide global search */
+.cViewPanel .cHeaderPanel .cSearchPublisher {
+	display: none;
+}
+
+/* Content background colour */
+html,
+.siteforceServiceBody .siteforceContentArea, 
+.cViewPanel.siteforceServiceBody {
+    background: #f3f4f6 !important;
+}
+
+/* Striped bar at the top of the page */
+.cViewPanel .cHeaderPanel .cHeaderOverlay {
+    background-color: #fff !important;
+    background-repeat: repeat-x !important;
+    background-position: top !important;
+}
+.cViewPanel .cHeaderPanel .cNavBarCon {
+    position: relative !important;
+    border-top: 1px solid #eeeeee;
+}
+
+/* Hide the my profile menu */
+/* Hide the my account menu */
+.cViewPanel .cHeaderPanel .cProfileCon .selfServiceUserProfileMenu .profile.uiMenuItem,
+.cViewPanel .cHeaderPanel .cProfileCon .selfServiceUserProfileMenu .myAccount.uiMenuItem {
+    display: none !important;
+}
+
+/* Profile name */
+.cViewPanel .cHeaderPanel .cProfileCon span.profileName {
+    text-shadow: none;
+    color: black;
+    max-width: none;
+    text-transform: none;
+    font-weight: 400;
+	white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+.cViewPanel .cHeaderPanel .selfServiceUserProfileMenu .down-arrow {
+	display: none !important;
+}
+@media only screen and (max-width: 48em) {
+    .cViewPanel .cHeaderPanel .cProfileCon span.profileName {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 64em) {
+    .cViewPanel .cHeaderPanel .cHeaderLine {
+		padding-right: 65px;
+		padding-left: 65px;
+	}
+}
+
+@media only screen and (min-width: 20em) {
+    .cViewPanel .cHeaderPanel .cHeaderLine {
+	    padding-right: 35px;
+		padding-left: 35px;
+	}
+}
+
+.communityLogo {
+    display: block;
+    /*noinspection CssUnknownTarget*/
+    background-image: url(/resource/QBCC_Logo_Transparent);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Title cased menus */
+.forceCommunityGlobalNavigation .slds-list__item a,
+.forceCommunityGlobalNavigation .slds-list__item button {
+    text-transform: none !important;
+}
+
+/* Login page */
+/* Ensure "forgot your password?" and other text is readable */
+.salesforceIdentityLoginForm2 .inverseTextColor {
+    color: var(--lwc-colorTextDefault,#333) !important;
+}
+/* Update page layout to work with myQBCC Notifications */
+#LoginNew.salesforceIdentityLoginBody2 {
+    flex-wrap: wrap;
+    align-items: start;
+}
+#LoginNew.salesforceIdentityLoginBody2 > .cHeaderPanel {
+    position: relative;
+}
+#LoginNew.salesforceIdentityLoginBody2 > .cHeaderPanel > div > .ui-widget {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+}
+#LoginNew.salesforceIdentityLoginBody2 > .cCenterPanel {
+    align-self: center;
+}
+
+/* Authentication page fields */
+.salesforceIdentityLoginForm2 .inputContainer:focus-within,
+.salesforceIdentityLoginBody2 .inputContainer:focus-within {
+    outline: 0;
+    border-color: var(--lwc-colorBorderInputActive,rgb(27, 150, 255));
+    background-color: var(--lwc-colorBackgroundInputActive,rgb(255, 255, 255));
+    box-shadow: var(--lwc-shadowButtonFocus,0 0 3px #0176d3);
+}
+.salesforceIdentityLoginForm2 .inputContainer input:focus,
+.salesforceIdentityLoginBody2 .inputContainer input:focus {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Tile menu wrap */
+community_navigation-tile-menu-item-banner > div {
+    word-break: normal !important;
+    white-space: normal !important;
+    word-wrap: normal !important;
+}
+
+/* Hide the top save bar of the settings page */
+.forceCommunityUserSettingsInternal div.row:first-child {
+    display: none !important;
+}

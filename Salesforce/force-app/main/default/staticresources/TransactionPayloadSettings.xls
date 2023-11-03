@@ -1,0 +1,12 @@
+name,product_type__c,AccountNumberExtension__c,DocumentType__c,GstRateCode__c,GstType__c,LedgerCode__c,MessageIdentifier__c,Narration1__c,Narration2__c
+ChartofAccount,null,, ,NA,T,,0,null,
+DisputePurchaseOrder-Line2,DisputePurchaseOrder,,DSPCST,C,I,GL,2,AP Payment Auth,Disputes Inspection Costs P Auth
+DisputePurchaseOrder-Line1,DisputePurchaseOrder,,DSPCST,NA,I,GC,1,AP Payment Auth,
+ClaimPayment-Line2,ClaimsDispute,,DSPCST,NA,I,GC,2,AP Payment Auth,
+ClaimPayment-Line1,ClaimsDispute,,DSPCST,C,I,GC,1,AP Payment Auth,Disputes Inspection Costs P Auth
+ClaimsInvoice-Line1,ClaimsInvoice,,CLMINV,NA,I,IC,1,Claim Contractor Invoice - Authorisation,
+ClaimsInvoice-Line2,ClaimsInvoice,,CLMINV,C,I,GL,2,Claim Contractor Invoice - Authorisation,Appr Contr Inv Appr Claims O/s
+ClaimRecoveries-Line1,ClaimRecoveries,,RECCHG,NA,I,AR,1,Recovery - Insurance,
+ClaimRecoveries-Line2,ClaimRecoveries,999999997-RCV INS,RECCHG,NA,I,CM,2,Recovery - Insurance,Recovery - Insurance
+ClaimApproval-Line1,ClaimApproval,#NAME?,CLMAPCST,NA,I,CM,1,Claim Authorisation,Claims approved outstanding
+ClaimApproval-Line2,ClaimApproval,#NAME?,CLMAPCST,NA,I,CM,2,Claim Authorisation,Claims approved Home Warranty

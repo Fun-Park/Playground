@@ -1,0 +1,63 @@
+Id,Label,Category,Help Text,Field Name,Scope
+1,Construction revenue,REVENUE,,Construction_revenue__c,"MFR47,MFR13,SC12"
+2,Other revenue,REVENUE,,Other_revenue__c,"MFR47,MFR13,SC12"
+3,Cost of sales,EXPENSES,,Cost_of_sales__c,"MFR47,MFR13,SC12"
+4,Interest expense,EXPENSES,<p>Interest expense is the cost incurred by an entity for borrowed funds.For further information refer <i>AASB 123 - Borrowing Costs</i<p/>,Interest_expense__c,MFR47
+5,Operating lease expense,EXPENSES,,Operating_lease_expense__c,MFR47
+6,Employee benefits expense,EXPENSES,,Employee_benefits_expense__c,MFR47
+7,Subcontractor expense,EXPENSES,,Subcontractor_expense__c,MFR47
+8,Legal fees,EXPENSES,,Legal_fees__c,MFR47
+9,Other operating expense,EXPENSES,,Other_operating_expense__c,"MFR47,MFR13,SC12"
+10,Assets held in project bank accounts,CURRENT_ASSETS,"<p>For further information, Refer to Building Industry Fairness (Security of Payment) Act 2017</p>",Assets_held_in_project_bank_accounts__c,MFR47
+11,Cash and cash equivalents,CURRENT_ASSETS,<p>Cash and cash equivalents are assets that are either cash or can be converted into cash immediately.</p>,Cash_and_cash_equivalents__c,"MFR47,MFR13,SC12"
+12,Prepayments,CURRENT_ASSETS,,Prepayments__c,MFR47
+13,Inventories - stock on hand,CURRENT_ASSETS,<p>Inventory is the term for the goods available for sale and raw materials used to produce goods available for sale. For further information refer <i>AASB 102 - Inventories</i> </p>,Inventories_stock_on_hand__c,MFR47
+14,Inventories - property development assets,CURRENT_ASSETS,,Inventories_property_development_asset__c,MFR47
+15,Work in progress,CURRENT_ASSETS,<p>Work in progress is the value of work for a project that has been completed but not yet invoiced</p>,Work_in_progress__c,"MFR47,MFR13"
+16,Other current assets,CURRENT_ASSETS,,Other_current_assets__c,"MFR47,MFR13,SC12"
+17,Due from related entities,CURRENT_ASSETS,"<p>Amounts owed by related parties. Examples of a related party:</p><li class=""liCSS IECSS"">Director;</li><li class=""liCSS IECSS"">Secretary;</li><li class=""liCSS IECSS"">Shareholder;</li><li class=""liCSS IECSS"">Related company (same directors of both companies).</li>",Due_from_Related_Entities__c,"MFR47,MFR13"
+18,Retentions (due in next 12 month period only),CURRENT_ASSETS,,Retentions__c,"MFR47,MFR13"
+19,Debtors in dispute (not included to be included in the amounts above),CURRENT_ASSETS,"<p>Recovery is subject to legal proceedings, client has terminated contract etc.</p>",Debtors_in_dispute__c,"MFR47,MFR13"
+20,Under 90 days,CURRENT_ASSETS,,Under_90_Days__c,"MFR47,MFR13"
+21,90-180 days,CURRENT_ASSETS,,X90_180_Days__c,"MFR47,MFR13"
+22,180-365 days,CURRENT_ASSETS,,X180_365_Days__c,"MFR47,MFR13"
+23,365+ days,CURRENT_ASSETS,,X365_Days__c,"MFR47,MFR13"
+24,Property plant and equipment,NON_CURRENT_ASSETS,,Property_plant_and_equipment__c,"MFR47,MFR13"
+25,Deferred tax assets,NON_CURRENT_ASSETS,<p>A deferred tax asset is an asset on a company's balance sheet that may be used to reduce its taxable income.</p>,Deferred_tax_assets__c,"MFR47,MFR13"
+26,Investments or shares in publicly listed entities,NON_CURRENT_ASSETS,,Investments_or_shares_in_public_entities__c,"MFR47,MFR13"
+27,Investments or shares in companies that are not publicly list companies,NON_CURRENT_ASSETS,,Investments_or_shares_private_entities__c,"MFR47,MFR13"
+28,Investments - other,NON_CURRENT_ASSETS,,Investments_other__c,"MFR47,MFR13"
+29,Related party loans,NON_CURRENT_ASSETS,"<p>Amounts owed by a related parties. Examples of a related party:</p><li class=""liCSS IECSS""> Director; </li> <li class=""liCSS IECSS""> Secretary ; </li> <li class=""liCSS IECSS"">Shareholder; </li> <li class=""liCSS IECSS""> Related company (same directors of both companies).</li>",Related_party_loans__c,"MFR47,MFR13"
+30,Tools of trade,NON_CURRENT_ASSETS,,Tools_of_trade__c,"MFR47,MFR13"
+31,Motor Vehicles,NON_CURRENT_ASSETS,,Motor_Vehicles__c,"MFR47,MFR13"
+32,"Other Vehicles - Boats, Ships, Jet Skis, Race horses, Racing cars",NON_CURRENT_ASSETS,,Other_Vehicles__c,"MFR47,MFR13"
+33,Personal furniture,NON_CURRENT_ASSETS,,Personal_furniture__c,"MFR47,MFR13"
+34,Trust assets,NON_CURRENT_ASSETS,,Trust_assets__c,"MFR47,MFR13"
+35,Goodwill,NON_CURRENT_ASSETS,,Goodwill__c,"MFR47,MFR13"
+36,Formation expenses,NON_CURRENT_ASSETS,,Formation_expenses__c,"MFR47,MFR13"
+37,Borrowing expenses,NON_CURRENT_ASSETS,,Borrowing_expenses__c,"MFR47,MFR13"
+38,Other intangible assets,NON_CURRENT_ASSETS,,Other_intangible_assets__c,"MFR47,MFR13"
+39,Units in trust that are not publicly listed,NON_CURRENT_ASSETS,,Units_in_trust_non_publicly_listed__c,"MFR47,MFR13"
+40,Non-current retentions,NON_CURRENT_ASSETS,,Non_current_retentions__c,"MFR47,MFR13"
+41,Other non-current assets,NON_CURRENT_ASSETS,,Other_non_current_assets__c,"MFR47,MFR13,SC12"
+42,Bank overdraft,CURRENT_LIABILITIES,,Bank_overdraft__c,"MFR47,MFR13"
+43,Related entity payables,CURRENT_LIABILITIES,,Related_entity_payables__c,"MFR47,MFR13"
+44,Other current liabilities,CURRENT_LIABILITIES,,Other_current_liabilities__c,"MFR47,MFR13,SC12"
+45,Current portion of long-term debt,CURRENT_LIABILITIES,,Current_liabilities_poltd__c,"MFR47,MFR13"
+46,Current,CURRENT_LIABILITIES,,Liabilities_Current__c,"MFR47,MFR13"
+47,30 days,CURRENT_LIABILITIES,,Liabilities_30_Days__c,"MFR47,MFR13"
+48,60 days,CURRENT_LIABILITIES,,Liabilities_60_Days__c,"MFR47,MFR13"
+49,90+ days,CURRENT_LIABILITIES,,Liabilities_90_Days__c,"MFR47,MFR13"
+50,Non current portion of long-term debt,NON_CURRENT_LIABILITIES,,Current_nonliabilties_poltd__c,"MFR47,MFR13"
+51,Other non-current liabilities,NON_CURRENT_LIABILITIES,,Other_non_current_liabilities__c,"MFR47,MFR13,SC12"
+52,Issued capital,EQUITY,,Issued_capital__c,"MFR47,MFR13"
+53,Reserves,EQUITY,,Reserves__c,MFR47
+54,Retained earnings,EQUITY,,Retained_earnings__c,"MFR47,MFR13"
+55,Other equity,EQUITY,,Other_equity__c,"MFR47,MFR13"
+56,Cash flows from operating activities,CASHFLOWS,,Cash_flows_from_operating_activities__c,"MFR47,MFR13"
+57,Cash flows from investing activities,CASHFLOWS,,Cash_flows_from_investing_activities__c,"MFR47,MFR13"
+58,Cash flows from financing activities,CASHFLOWS,,Cash_flows_from_financing_activities__c,"MFR47,MFR13"
+59,Other cash flow,CASHFLOWS,,Other_cash_flow__c,"MFR47,MFR13"
+60,Net increase / (decrease)  in cash and cash equivalents,CASHFLOWS,,,"MFR47,MFR13"
+61,Cash and cash equivalents at the beginning of the year,CASHFLOWS,,Cash_and_cash_equivalents_at_the_beginni__c,"MFR47,MFR13"
+62,Cash and cash equivalents at the end of the year,CASHFLOWS,,,"MFR47,MFR13"

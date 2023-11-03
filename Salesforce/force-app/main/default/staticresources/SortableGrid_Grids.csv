@@ -1,0 +1,25 @@
+Name,sortablegrid__All_Rows__c,sortablegrid__DisableSharing__c,sortablegrid__Filter__c,sortablegrid__Is_Valid__c,sortablegrid__Parent_Field_Name__c,sortablegrid__SDG_Tag__c,sortablegrid__sObjectName__c,sortablegrid__Default_Sort__c
+RTIIP Exemptions,FALSE,FALSE,RecordType.Name='Exemption',TRUE,RTIIP_Application_Detail__c,RTIIP Exemptions,RTIIP_Supporting_Detail__c,
+RTIIP Registered Post,FALSE,FALSE,RecordType.Name='Registered Post',TRUE,RTIIP_Application_Detail__c,RTIIP Registered Post,RTIIP_Supporting_Detail__c,
+RTIIP Status Histories,FALSE,TRUE,RecordType.Name='Status History',TRUE,RTIIP_Application_Detail__c,RTIIP Status Histories,RTIIP_Supporting_Detail__c,sh_Start_Time__c DESC
+RTIIP Third Party Consultation,FALSE,FALSE,RecordType.Name='Third Party Consultation',TRUE,RTIIP_Application_Detail__c,RTIIP Third Party Consultation,RTIIP_Supporting_Detail__c,
+RTIIP Time and Control Actual Costings,FALSE,FALSE,RecordType.Name='Time and Control Actual',TRUE,RTIIP_Application_Detail__c,RTIIP Time and Control Actual Costings,RTIIP_Supporting_Detail__c,
+RTIIP Time and Control Preliminary Estimates,FALSE,FALSE,RecordType.Name='Time and Control Estimate',TRUE,RTIIP_Application_Detail__c,RTIIP Time and Control Preliminary Estimates,RTIIP_Supporting_Detail__c,
+RTIIP Time and Document Requests,FALSE,FALSE,RecordType.Name='Time and Document Request',TRUE,RTIIP_Application_Detail__c,RTIIP Time and Document Requests,RTIIP_Supporting_Detail__c,
+Insolvencies Active,FALSE,FALSE,Relationship_Value__c = 'Bankrupt' AND (To_Date__c = NULL OR To_Date__c >= TODAY),TRUE,Main_Participant__c,Relationships Insolvencies Active,Relationship__c,From_Date__c DESC
+Insolvencies Expired,FALSE,FALSE,Relationship_Value__c = 'Bankrupt' AND To_Date__c < TODAY,TRUE,Main_Participant__c,Relationships Expired Insolvencies,Relationship__c,From_Date__c DESC
+Relationships Expired,FALSE,FALSE,Relationship_Value__c != 'Bankrupt' AND To_Date__c < TODAY,TRUE,Main_Participant__c,Relationships Expired,Relationship__c,Secondary_Participant__r.Name
+Secondary Relationships,FALSE,FALSE,Relationship_Value__c != 'Bankrupt' AND (To_Date__c = NULL OR To_Date__c >= TODAY),TRUE,Secondary_Participant__c,Secondary Relationships,Relationship__c,Main_Participant__r.Name
+Secondary Relationships Expired,FALSE,FALSE,Relationship_Value__c != 'Bankrupt' AND To_Date__c < TODAY,TRUE,Secondary_Participant__c,Secondary Relationships Expired,Relationship__c,Main_Participant__r.Name
+Secondary Insolvencies Active,FALSE,FALSE,Relationship_Value__c = 'Bankrupt' AND (To_Date__c = NULL OR To_Date__c >= TODAY),TRUE,Secondary_Participant__c,Insolvencies Active Secondary,Relationship__c,From_Date__c DESC
+Secondary Insolvencies Expired,FALSE,FALSE,Relationship_Value__c = 'Bankrupt' AND To_Date__c < TODAY,TRUE,Secondary_Participant__c,Expired Insolvencies Secondary,Relationship__c,From_Date__c DESC
+CPD Status,FALSE,FALSE,,TRUE,Account__c,CPD Status,CPD_Status__c,CPD_Year__c DESC
+Education,FALSE,FALSE,,TRUE,Account__c,Education,Education__c,CreatedDate DESC
+Infringements for Case,false,false,,true,Breach__r.Case__c,Infringements for Case,Infringement__c,Name
+Infringements for Customer Current,false,false,"Status__c NOT IN ('Fine Paid in Full', 'SPER Invoice Withdrawn','Write Off')",true,Customer__c,Infringements for Customer Current,Infringement__c,Infringement_Issue_Date__c DESC
+Infringements for Customer Past,false,false,"Status__c IN ('Fine Paid in Full', 'SPER Invoice Withdrawn','Write Off')",true,Customer__c,Infringements for Customer Past,Infringement__c,Infringement_Issue_Date__c DESC
+Insufficient Payment Notifications,false,false,RecordType.DeveloperName='Insufficient_Payment',true,Trust_Account__c,Insufficient Payment Notifications,Trust_Notification__c,
+Trust Review Events,false,false,RecordType.DeveloperName='Review_Event',true,Trust_Account__c,Trust Review Events,Trust_Notification__c,
+Related Entity Notifications,false,false,RecordType.DeveloperName='Related_Entity',true,Trust_Account__c,Related Entity Notifications,Trust_Notification__c,
+Trust Reviews,false,false,(RecordType.DeveloperName='Review' OR RecordType.DeveloperName='Review_Exemption'),true,Trust_Account__c,Trust Reviews,Trust_Notification__c,
+Trust Admin and Training Notifications,false,false,RecordType.DeveloperName='Training',true,Trust_Account__c,Trust Admin and Training Notifications,Trust_Notification__c,

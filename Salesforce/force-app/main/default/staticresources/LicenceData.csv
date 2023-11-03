@@ -1,0 +1,61 @@
+﻿Licence_Class__c.Code__c,Licence_Class__c.Description__c,Licence_Class__c.From_Date__c,Licence_Class__c.To_Date__c,Licence_Class__c.Sub_Type__c,Licence_Grade__c.Code__c,Licence_Grade__c.Description__c,Licence_Grade__c.From_Date__c,Licence_Grade__c.To_Date__c,Licence_Class_Grade__c.From_Date__c,Licence_Class_Grade__c.To_Date__c,Licence_Type_Class_Grade__c.Licence_Type__c
+FFSP,Fire Safety Professional,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FFSP,Fire Safety Professional,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FOSP,Fire Safety Professional - Occupational,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FPSC,Fire Protection - Passive Stream - Certify,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FPSC,Fire Protection - Passive Stream - Certify,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FPSDIM,Fire Protection - Passive Stream - Install and Maintain - Fire Doors and Fire Shutters,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FPSDIM,Fire Protection - Passive Stream - Install and Maintain - Fire Doors and Fire Shutters,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FPSPIM,"Fire Protection - Passive Stream - Install and Maintain - Fire Collars, Fire-rated Penetrations and Fire-rated Joint Sealing",1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FPSPIM,"Fire Protection - Passive Stream - Install and Maintain - Fire Collars, Fire-rated Penetrations and Fire-rated Joint Sealing",1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FPSWIM,Fire Protection - Passive Stream - Install and Maintain - Fire and Smoke Walls and Fire-rated Ceilings,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FPSWIM,Fire Protection - Passive Stream - Install and Maintain - Fire and Smoke Walls and Fire-rated Ceilings,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FPSIT,Fire Protection - Passive Stream - Inspect and Test,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FPSIT,Fire Protection - Passive Stream - Inspect and Test,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FSHC,Fire Protection - Special Hazard Fire System Stream - Certify,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FSHC,Fire Protection - Special Hazard Fire System Stream - Certify,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FSHIM,Fire Protection - Special Hazard Fire System Stream - Install and Maintain,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FSHIM,Fire Protection - Special Hazard Fire System Stream - Install and Maintain,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FWD,Fire Protection - Water-Based Fire System Stream - Design,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FWD,Fire Protection - Water-Based Fire System Stream - Design,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FWC,Fire Protection - Water-Based Fire System Stream - Certify,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FWC,Fire Protection - Water-Based Fire System Stream - Certify,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FWIM,Fire Protection - Water-Based Fire System Stream - Install and Maintain,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FWIM,Fire Protection - Water-Based Fire System Stream - Install and Maintain,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FWCIIM,Fire Protection - Water-Based Fire System Stream - Install and Maintain - Restricted to Commercial and Industrial Types,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FWCIIM,Fire Protection - Water-Based Fire System Stream - Install and Maintain - Restricted to Commercial and Industrial Types,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FWDRIM,Fire Protection - Water-Based Fire System Stream - Install and Maintain - Restricted to Domestic and Residential Types,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FWDRIM,Fire Protection - Water-Based Fire System Stream - Install and Maintain - Restricted to Domestic and Residential Types,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FPTC,Fire Protection - Portables Stream - Certify,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FPTC,Fire Protection - Portables Stream - Certify,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FPTIM,Fire Protection - Portables Stream - Install and Maintain,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FPTIM,Fire Protection - Portables Stream - Install and Maintain,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FEAD,Fire Protection - Electrical Stream - Design - Fire Alarm Systems,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FEAD,Fire Protection - Electrical Stream - Design - Fire Alarm Systems,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FEAC,Fire Protection - Electrical Stream - Certify - Fire Alarm Systems,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FEAC,Fire Protection - Electrical Stream - Certify - Fire Alarm Systems,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FELC,Fire Protection - Electrical Stream - Certify - Emergency Lighting,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FELC,Fire Protection - Electrical Stream - Certify - Emergency Lighting,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FEAIM,Fire Protection - Electrical Stream - Install and Maintain - Fire Alarm Systems,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FEAIM,Fire Protection - Electrical Stream - Install and Maintain - Fire Alarm Systems,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FELIT,Fire Protection - Electrical Stream - Inspect and Test - Emergency Lighting,1900-01-01,,C,NOMINEE SUPERVISOR,Nominee Supervisor,1900-01-01,,1900-01-01,,I
+FELIT,Fire Protection - Electrical Stream - Inspect and Test - Emergency Lighting,1900-01-01,,C,CONTRACTOR,Trade Contractor Licence,1900-01-01,,1900-01-01,,I
+FPSOC,Fire Protection - Passive Stream Occupational - Certify,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FPSODIM,Fire Protection - Passive Stream Occupational - Install and Maintain - Fire Doors and Fire Shutters,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FPSOPIM,"Fire Protection - Passive Stream Occupational - Install and Maintain - Fire Collars, Fire-rated Penetrations and Fire-Rated Joint Sealing",1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FPSOWIM,Fire Protection - Passive Stream Occupational - Install and Maintain - Fire and Smoke Walls and Fire-rated Ceilings,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FPSOIT,Fire Protection - Passive Stream Occupational - Inspect and Test,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FSHOC,Fire Protection - Special Hazard Fire System Stream Occupational - Certify,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FSHOIM,Fire Protection - Special Hazard Fire System Stream Occupational - Install and Maintain,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FWOD,Fire Protection - Water-Based Fire System Stream Occupational - Design,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FWOC,Fire Protection - Water-Based Fire System Stream Occupational - Certify,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FWOIM,Fire Protection - Water-Based Fire System Stream Occupational - Install and Maintain,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FWOCIIM,Fire Protection - Water-Based Fire System Stream Occupational - Install and Maintain - Restricted to Commercial and Industrial Types,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FWODRIM,Fire Protection - Water-Based Fire System Stream Occupational - Install and Maintain - Restricted to Domestic and Residential Types,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FPTOC,Fire Protection - Portables Stream Occupational - Certify,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FPTOIM,Fire Protection - Portables Stream Occupational - Install and Maintain,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FEOAD,Fire Protection - Electrical Stream Occupational - Design - Fire Alarm Systems,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FEOAC,Fire Protection - Electrical Stream Occupational - Certify - Fire Alarm Systems,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FEOLC,Fire Protection - Electrical Stream Occupational - Certify - Emergency Lighting,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FEOAIM,Fire Protection - Electrical Stream Occupational - Install and Maintain - Fire Alarm Systems,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I
+FEOLIT,Fire Protection - Electrical Stream Occupational - Inspect and Test - Emergency Lighting,1900-01-01,,OCC,FIRE OCCUPATIONAL,Fire Occupational,1900-01-01,,1900-01-01,,I

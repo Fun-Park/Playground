@@ -1,0 +1,113 @@
+Active__c,Code__c,Description__c,Name
+true,AHD,Air Handling Duct Installation
+true,RAMP,"Refrigeration,Airconditioning And Mechanical Services Restricted To Multipackaged Residential Airconditioning Equipment And Plant"
+true,RARE,"Refrigeration,Airconditioning And Mechanical Services Restricted To Residential Evaporative Cooling Equipment"
+true,RASC,"Refrigeration,Airconditioning And Mechanical Services Restricted To Self-Contained Window Package Residential Airconditioning Installation"
+true,RALD,"Refrigeration,Airconditioning and Mechanical Services Including Limited Design"
+true,RAUD,"Refrigeration,Airconditioning and Mechanical Services Including Unlimited Design"
+true,BBL,Bricklaying Restricted To Blocklaying
+true,BLB,Bricklaying and Blocklaying
+true,BLR,Builder - Low Rise
+true,BMR,Builder - Medium Rise
+true,BO,Builder - Open
+true,BRKB,"Builder Restricted to Kitchen,Bathroom and Laundry Installation"
+true,BRSF,Builder Restricted to Shopfitting
+true,BRSS,Builder Restricted to Special Structures
+true,BRSL,Builder Restricted to Structural Landscaping
+true,RRW,Building Restricted Renovations - Wet Areas
+true,AA,Building Restricted To Alterations And Additions
+true,BR,Building Restricted To Building Removal
+true,EF,Building Restricted To External Finishe
+true,NSR,Building Restricted To Non Structural Renovations
+true,RR,Building Restricted To Renovations,Repairs And Maintenance
+true,RM,Building Restricted To Repairs And Maintenance
+true,CRBI,Completed Residential Building Inspection
+true,CM,Cabinet Making
+true,CP,Carpentry
+true,CF,Carpentry (Formwork)
+true,CJF,Carpentry Restricted To Framing
+true,CJI,Carpentry Restricted To Internal Finishes
+true,CJL,Carpentry Restricted To Lattice And Other Timber Work
+true,CJO,Carpentry Restricted To Outdoor Construction
+true,JN,Joinery
+true,BPMS,Builder - Project Management Services
+true,CON,Concreting
+true,COR,Concreting Restricted To Concrete Repairs
+true,COL,Concreting Restricted To Light Concreting
+true,COLM,Concreting Restricted To Minor Concrete Work
+true,COS,Concreting Restricted To Special Finishes
+true,COU,Concreting Restricted To Underpinning And Foundation Repair
+true,FW,Foundation Work (Piling and Anchors)
+true,SIF,Specialised Contracting - Screw In Foundations
+true,SFX,Steel Fixing
+true,BDLR,Building Design - Low Rise
+true,BDMR,Building Design - Medium Rise
+true,BDO,Building Design - Open
+true,HYSD,Hydraulic Services Design
+true,FFEL,Emergency Lighting
+true,FFEP,Emergency Procedures
+true,FFDS,Fire Detection,Alarm and Warning Systems
+true,FFHH,Fire Hydrants and Hose Reels
+true,FFPS,Fire Pumps
+true,FFSP,Fire Safety Professional
+true,FTSH,Fire Suppression Systems - Special Hazards
+true,FFPJ,"Passive Fire Protection - Fire Collars,Penetrations and Joint Sealing"
+true,FFFD,"Passive Fire Protection - Fire Doors and Shutters"
+true,FFWC,"Passive Fire Protection - Fire and Smoke Walls and Ceilings"
+true,FFPE,Portable Fire Equipment and Hose Reels (Hose Reels Downstream of Stopcock Only)
+true,FFSH,Special Hazard Suppression Systems
+true,FFSS,Sprinkler and Suppression Systems (Reticulated Water Based)
+true,FCCK,Floor Finishing And Covering Restricted To Cork Flooring
+true,FCT,Floor Finishing And Covering Restricted To Floor Sanding And Finishing - Timber Floors
+true,FCFF,Floor Finishing And Covering Restricted To Install Floating Flooring
+true,FCIS,Floor Finishing And Covering Restricted To Install Strip Flooring (Non Structural)
+true,FCP,Floor Finishing And Covering Restricted To Parquetry Flooring
+true,FCSF,Floor Finishing And Covering Restricted To Seamless Flooring
+true,FCHS,Floor Finishing and Covering (Hard Sector)
+true,GFT,Gasfitting
+true,GGA,Glass,Glazing and Aluminium
+true,MFG,Metal Fascias and Gutters
+true,BRKB,"Builder Restricted to Kitchen,Bathroom and Laundry Installation"
+true,CM,Cabinet Making
+true,JN,Joinery
+true,BRSL,Builder Restricted to Structural Landscaping
+true,SLT,Structural Landscaping (Trade)
+true,SLF,Structural Landscaping Restricted To Fence
+true,SLR,Structural Landscaping Restricted To Retaining Walls
+true,PND,Painting Restricted To New Domestic Buildings
+true,PNDR,Painting Restricted To Repainting Domestic Buildings
+true,PNR,Painting Restricted To Roof Painting
+true,PNS,Painting Restricted To Special Finishes
+true,PNAD,Painting and Decorating
+true,BSP,Brick and Segmental Paving
+true,TMC,Termite Management - Chemical
+true,TMP,Termite Management - Physical
+true,PDW,Plastering Drywall
+true,PLC,Plastering Drywall Restricted To Cornice Fixing
+true,PLP,Plastering Drywall Restricted To Partition Installation
+true,PLS,Plastering Drywall Restricted To Plaster Setting
+true,PLSC,Plastering Drywall Restricted To Suspended Ceiling Fixing
+true,PLW,Plastering Drywall Restricted To Wall Board Fixing
+true,PSD,Plastering Solid
+true,DN,Drainage
+true,DNS,Drainage - On-site Sewerage Facility
+true,IR,Irrigation
+true,PDP,Plumbing And Draining Restricted To Plumbing
+true,PDT,Plumbing And Draining Restricted To Tanks - Water Supply
+true,PDRW,Plumbing And Draining Restricted To Wall Cladding
+true,PDN,Plumbing and Drainage
+true,RTS,Plumbing And Draining Restricted To Skylight And Ventilator Installation
+true,RFT,Roof Tiling
+true,RTM,Roof Tiling Restricted To Roof Tile Maintenance
+true,RWC,Roof and Wall Cladding
+true,NSMF,Non-Structural Metal Fabrication and Installation
+true,BRSS,Builder Restricted to Special Structures
+true,SCG,Sheds,Carports and Garages
+true,SFT,Shopfitting (Trade)
+true,SCF,Site Classifier
+true,STM,Stone Masonry
+true,SMF,Structural Metal Fabrication and Erection
+true,SPPF,Swimming Pool And Spa Construction Restricted To Finishes
+true,SPIM,Swimming Pool Construction,Installation and Maintenance
+true,WFT,Wall and Floor Tiling
+true,WP,Waterproofing

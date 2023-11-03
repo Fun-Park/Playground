@@ -1,0 +1,19 @@
+c-case-hierarchy .slds-is-selected{
+   font-weight: bold !important;
+}
+
+c-case-hierarchy .slds-is-selected .slds-truncate{
+   font-weight: bold !important;
+}
+
+c-case-result-tree .slds-is-selected{
+    box-shadow:none !important;
+}
+
+c-case-result-tree button[disabled]{
+    display:none !important;
+}
+
+c-case-result-tree .slds-is-selected .slds-truncate{
+    font-weight: bold !important;
+}

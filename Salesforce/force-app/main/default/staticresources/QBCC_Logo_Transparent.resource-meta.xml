@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>image/png</contentType>
+    <description>Standard QBCC logo as a transparent background PNG.  Referenced in the Agency_Community_Styles stylesheet static resource.</description>
+</StaticResource>
