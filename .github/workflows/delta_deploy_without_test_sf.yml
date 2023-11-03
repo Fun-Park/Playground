@@ -175,6 +175,13 @@ jobs:
           encoding: 'utf8'                                                                    # Optional, defaults to 'utf8'
           path: "./"
 
+      - name: Set SF_API_VERSION
+        run: |
+            sourceApiVersion=$(jq '.sourceApiVersion | tonumber' ./sfdx-project.json)
+            echo SF_ORG_API_VERSION=$sourceApiVersion.0 >> $GITHUB_ENV
+            sf config set org-api-version=$sourceApiVersion.0 --global
+            sf config list
+
       # Get last commit of successful workflow run
       - name: 'Get last commit of successful workflow run'
         uses: nrwl/nx-set-shas@v4
@@ -185,17 +192,15 @@ jobs:
           workflow-id: ${{env.WORKFLOW_ID}}
           error-on-no-successful-workflow: true   # set to true to exit if no successful workflow run is found. Otherwise it will get HEAD~1 instead.
 
-      - name: Set SF_API_VERSION
-        run: |
-          sourceApiVersion=$(jq '.sourceApiVersion | tonumber' ./sfdx-project.json)
-          echo SF_ORG_API_VERSION=$sourceApiVersion.0 >> $GITHUB_ENV
-          sf config set org-api-version=$sourceApiVersion.0 --global
-          sf config list
-
-      - name: 'echo environment variables'
+      - name: 'echo last successful commit'
+        if: ${{steps.last_successful_commit.outputs.base != ''}}
         run: |
             echo "last successful commit :${{env.NX_BASE}}"
+            echo "Last successful run has the latest commit-id of: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
             echo "SF_ORG_API_VERSION :${{env.SF_ORG_API_VERSION}}"
+      - if: ${{steps.last_successful_commit.outputs.base == ''}}
+        run: |
+            echo "Unable to find a successful workflow run"
           
       # Install Git Delta
       - name: 'Install Git Delta'
@@ -222,9 +227,11 @@ jobs:
           retention-days: 5
 
       # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
-      - name: 'Deploy Full Package XML if no Delta'
+      - name: 'Get Full Package XML if no Delta found'
         if: ${{steps.last_successful_commit.outputs.base == ''}}
-        run: echo "PACKAGEXML_FILE=${{env.FULL_PACKAGEXML_FILE}}" >> $GITHUB_ENV
+        run: |
+          echo "PACKAGEXML_FILE=${{env.FULL_PACKAGEXML_FILE}}" >> $GITHUB_ENV
+          echo 'Last successful run is NOT found. Full deployment done instead.' >> $GITHUB_STEP_SUMMARY
         # shell: bash
         # run: cat ${{env.FULL_PACKAGEXML_FILE}} > ${{env.PACKAGEXML_FILE}}
 
@@ -980,7 +987,6 @@ jobs:
           echo '## Change Log' >> $GITHUB_STEP_SUMMARY
           cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
-          echo "Last successful run has the latest commit-id of: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
           echo '```' >> $GITHUB_STEP_SUMMARY
 
       #############################################################################
@@ -998,7 +1004,8 @@ jobs:
         run: |
           if test -f ./deploy-result.json;
           then
-              echo "deploy-result.json found." >> $GITHUB_STEP_SUMMARY
+              echo "# deploy-result.json found." >> $GITHUB_STEP_SUMMARY
+              cat ./deploy-result.json >> $GITHUB_STEP_SUMMARY
           else
               echo "deploy-result.json not found" >> $GITHUB_STEP_SUMMARY
           fi
