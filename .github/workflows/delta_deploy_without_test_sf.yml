@@ -224,8 +224,9 @@ jobs:
       # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
       - name: 'Deploy Full Package XML if no Delta'
         if: ${{steps.last_successful_commit.outputs.base == ''}}
-        shell: bash
-        run: cat ${{env.FULL_PACKAGEXML_FILE}} > ${{env.PACKAGEXML_FILE}}
+        run: echo "PACKAGEXML_FILE=${{env.FULL_PACKAGEXML_FILE}}" >> $GITHUB_ENV
+        # shell: bash
+        # run: cat ${{env.FULL_PACKAGEXML_FILE}} > ${{env.PACKAGEXML_FILE}}
 
       - name: inject branch based secret values
         uses: noliran/branch-based-secrets@v1
