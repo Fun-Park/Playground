@@ -220,21 +220,13 @@ jobs:
         shell: bash
         run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --output package/delta
 
-      - name: Upload destructiveChanges as artifact
+      - name: Upload delta output as artifacts
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         uses: actions/upload-artifact@v3
         with:
           name: delta-artefacts    # Zip Filename that will be created
-          path: package/
+          path: package/delta/
           retention-days: 5
-
-      - name: Upload destructiveChanges as artifact
-        if: ${{steps.last_successful_commit.outputs.base != ''}}
-        uses: actions/upload-artifact@v3
-          with:
-            name: destructiveChanges    # Zip Filename that will be created
-            path: ./destructiveChanges/destructiveChanges.xml
-            retention-days: 5
 
       # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
       - name: 'Deploy Full Package XML if no Delta'
