@@ -182,7 +182,7 @@ jobs:
         with:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
-          error-on-no-successful-workflow: false        # set to true to error and exit if no successful workflow run is found
+          error-on-no-successful-workflow: true   # set to true to exit if no successful workflow run is found. Otherwise it will get HEAD~1 instead.
 
       - name: Set SF_API_VERSION
         run: |
@@ -977,6 +977,7 @@ jobs:
           cat ./CHANGE_LOG.txt
           echo '## Change Log' >> $GITHUB_STEP_SUMMARY
           cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
           echo "Last successful run has the latest commit-id of: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
           echo '```' >> $GITHUB_STEP_SUMMARY
 
