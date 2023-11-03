@@ -222,8 +222,8 @@ jobs:
       # print out package.xml file
       - name: 'Display destructiveChanges.xml in Summary'
         run: |
-          echo '#desctructiveChanges.xml' >> $GITHUB_STEP_SUMMARY
-          cat ${{env.PACKAGEXML_FILE}} >> $GITHUB_STEP_SUMMARY
+          echo '## desctructiveChanges.xml' >> $GITHUB_STEP_SUMMARY
+          cat ./package/destructiveChanges/destructiveChanges.xml >> $GITHUB_STEP_SUMMARY
 
       - name: Upload delta output as artifacts
         if: ${{steps.last_successful_commit.outputs.base != ''}}
