@@ -231,7 +231,7 @@ jobs:
         if: ${{steps.last_successful_commit.outputs.base == ''}}
         run: |
           echo "PACKAGEXML_FILE=${{env.FULL_PACKAGEXML_FILE}}" >> $GITHUB_ENV
-          echo 'Last successful run is NOT found. Full deployment done instead.' >> $GITHUB_STEP_SUMMARY
+          echo 'Last successful run was NOT found. Full deployment done instead.' >> $GITHUB_STEP_SUMMARY
         # shell: bash
         # run: cat ${{env.FULL_PACKAGEXML_FILE}} > ${{env.PACKAGEXML_FILE}}
 
@@ -975,7 +975,7 @@ jobs:
             then
                echo "deployment-package.zip created." >> $GITHUB_STEP_SUMMARY
             else
-               echo "deployment-package.zip artefact not created for this branch" >> $GITHUB_STEP_SUMMARY
+               echo "deployment-package.zip artefact was NOT created for this branch" >> $GITHUB_STEP_SUMMARY
             fi
 
       - name: 'Output Change Log'
@@ -1005,7 +1005,13 @@ jobs:
           if test -f ./deploy-result.json;
           then
               echo "# deploy-result.json found." >> $GITHUB_STEP_SUMMARY
-              cat ./deploy-result.json >> $GITHUB_STEP_SUMMARY
+              echo "DEPLOY_RESULT=true" >> $GITHUB_ENV             
           else
               echo "deploy-result.json not found" >> $GITHUB_STEP_SUMMARY
           fi
+      - if: ${{env.DEPLOY_RESULT == 'true'}}
+        uses: actions/upload-artifact@v3
+        with:
+          name: deployment-result.zip
+          path: deploy-result.json
+          retention-days: 5
