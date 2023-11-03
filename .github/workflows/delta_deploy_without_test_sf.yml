@@ -218,14 +218,14 @@ jobs:
       - name: 'Compare and pickup delta change only'
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         shell: bash
-        run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --output package/delta
+        run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --output package
 
       - name: Upload delta output as artifacts
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         uses: actions/upload-artifact@v3
         with:
           name: delta-artefacts    # Zip Filename that will be created
-          path: package/delta/
+          path: package/
           retention-days: 5
 
       # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
