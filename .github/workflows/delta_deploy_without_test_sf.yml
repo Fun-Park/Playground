@@ -228,7 +228,7 @@ jobs:
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         uses: actions/upload-artifact@v3
         with:
-          name: desctructiveChanges    # Zip Filename that will be created
+          name: desctructiveChanges.zip    # Zip Filename that will be created
           path: package/destructiveChanges/destructiveChanges.xml
           retention-days: 5
 
