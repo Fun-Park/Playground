@@ -218,7 +218,7 @@ jobs:
       - name: 'Compare and pickup delta change only'
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         shell: bash
-        run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --ignore ignore --output .
+        run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --output deployment_output.
 
       # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
       - name: 'Deploy Full Package XML if no Delta'
