@@ -205,7 +205,6 @@ jobs:
           cat ./CHANGE_LOG.txt
           echo '## Change Log' >> $GITHUB_STEP_SUMMARY
           echo "Last successful workflow run commit-id: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
-          echo '```' >> $GITHUB_STEP_SUMMARY
           cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
 
@@ -221,9 +220,10 @@ jobs:
         run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --generate-delta --output package
 
       # print out package.xml file
-      - name: 'Delta package.xml output'
-        shell: bash
-        run: cat ${{env.PACKAGEXML_FILE}} >> $GITHUB_STEP_SUMMARY
+      - name: 'Display destructiveChanges.xml in Summary'
+        run: |
+          echo '#desctructiveChanges.xml' >> $GITHUB_STEP_SUMMARY
+          cat ${{env.PACKAGEXML_FILE}} >> $GITHUB_STEP_SUMMARY
 
       - name: Upload delta output as artifacts
         if: ${{steps.last_successful_commit.outputs.base != ''}}
