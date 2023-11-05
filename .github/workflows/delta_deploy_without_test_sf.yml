@@ -186,11 +186,11 @@ jobs:
       - name: 'Get last commit of successful workflow run'
         uses: nrwl/nx-set-shas@v4
         id: last_successful_commit
-        continue-on-error: true
+        continue-on-error: true                   # on-error a full deployment will be performed
         with:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
-          error-on-no-successful-workflow: false   # set to true to exit if no successful workflow run is found. Otherwise it will get HEAD~1 instead.
+          error-on-no-successful-workflow: true   # setting to false will take ^HEAD (upon error) as last successful .
 
       - name: 'echo last successful commit'
         if: ${{steps.last_successful_commit.outputs.base != ''}}

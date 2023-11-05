@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Licence Tool - Baseline</fullName>
+                <default>false</default>
+                <label>Licence Tool - Baseline</label>
+            </value>
+            <value>
+                <fullName>Licence Tool - Licensee</fullName>
+                <default>false</default>
+                <label>Licence Tool - Licensee</label>
+            </value>
+            <value>
+                <fullName>Licence Tool - Non Licensee</fullName>
+                <default>false</default>
+                <label>Licence Tool - Non Licensee</label>
+            </value>
+            <value>
+                <fullName>Notifiable Works Interactive Guide - Baseline</fullName>
+                <default>false</default>
+                <label>Notifiable Works Interactive Tool - Baseline</label>
+            </value>
+            <value>
+                <fullName>Notifiable Works Interactive Guide - Descriptive</fullName>
+                <default>false</default>
+                <label>Notifiable Works Interactive Tool - Reference</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
