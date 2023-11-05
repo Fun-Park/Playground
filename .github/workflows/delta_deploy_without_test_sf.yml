@@ -190,7 +190,7 @@ jobs:
         with:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
-          error-on-no-successful-workflow: true   # set to true to exit if no successful workflow run is found. Otherwise it will get HEAD~1 instead.
+          error-on-no-successful-workflow: false   # set to true to exit if no successful workflow run is found. Otherwise it will get HEAD~1 instead.
 
       - name: 'echo last successful commit'
         if: ${{steps.last_successful_commit.outputs.base != ''}}
