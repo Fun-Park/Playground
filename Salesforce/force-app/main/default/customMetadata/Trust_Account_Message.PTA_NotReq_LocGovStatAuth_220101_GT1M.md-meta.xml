@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PTA_NotReq_LocGovStatAuth_220101_GT1M</label>
+    <protected>false</protected>
+    <values>
+        <field>Message__c</field>
+        <value xsi:type="xsd:string">Based on your selections, you (the contracted party) are not required to set up a Project Trust Account but later phases may apply to contracts similar to the one your selections are based on. However, if your contracting party is a state authority, from 1 January 2022, the state authority can decide that a project trust is to be established for a contract value &gt; $1M.</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_PTA_Required__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if a Project Trust Account Required</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Indicates if a Project Trust Account Required</inlineHelpText>
+    <label>Is PTA Required</label>
+    <type>Checkbox</type>
+</CustomField>

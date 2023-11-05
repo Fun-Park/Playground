@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Combination of parameters to determine if a trust account is required</description>
+    <label>Trust Account Requirement Parameter</label>
+    <pluralLabel>Trust Account Requirement Parameters</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

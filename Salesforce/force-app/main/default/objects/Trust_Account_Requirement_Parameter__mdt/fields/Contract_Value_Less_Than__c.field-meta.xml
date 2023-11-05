@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Value_Less_Than__c</fullName>
+    <description>Contract value less than (excluding GST) OR leave this field blank</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Contract value less than (excluding GST) OR leave this field blank</inlineHelpText>
+    <label>Contract Value Less Than</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

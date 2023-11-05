@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Over_50_Percent__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Is more than 50% of the contract price for project trust work?</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Is more than 50% of the contract price for project trust work?</inlineHelpText>
+    <label>Is Over 50 Percent For Project</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subcontractor_Engaged__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Is there, or will there be, at least one subcontractor engaged for the work?</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Is there, or will there be, at least one subcontractor engaged for the work?</inlineHelpText>
+    <label>Is Subcontractor Engaged For the Work</label>
+    <type>Checkbox</type>
+</CustomField>
