@@ -153,13 +153,13 @@ jobs:
         run: npm install
 
       # Get last commit of successful workflow run
-      # - name: 'Get last commit of successful workflow run'
-      #   uses: nrwl/nx-set-shas@v4
-      #   id: last_successful_commit
-      #   with:
-      #     main-branch-name: ${{env.BRANCH_NAME}}
-      #     workflow-id: ${{env.WORKFLOW_ID}}
-      #     error-on-no-successful-workflow: false        # set to true to error and exit if no successful workflow run is found
+      - name: 'Get last commit of successful workflow run'
+        uses: nrwl/nx-set-shas@v4
+        id: last_successful_commit
+        with:
+          main-branch-name: ${{env.BRANCH_NAME}}
+          workflow-id: ${{env.WORKFLOW_ID}}
+          error-on-no-successful-workflow: false        # set to true to error and exit if no successful workflow run is found
 
       - name: Set SF_API_VERSION
         run: |
@@ -194,7 +194,7 @@ jobs:
         run: |
           npm run split --allsecret=${{secrets[env.DEPLOY_SETTINGS_NAME]}}
 
-      # - name: spill the SFDX_URL
+      # - name: echo SFDX_URL
       #   run: |
       #     echo "SFDX_URL : ${{env.SFDX_URL}}"
 
