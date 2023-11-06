@@ -191,26 +191,32 @@ jobs:
           workflow-id: ${{env.WORKFLOW_ID}}
           error-on-no-successful-workflow: false   # setting to false will take ^HEAD (upon error) as last successful .
 
+      
+
       - name: 'echo last successful commit'
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         run: |
+            #  echo LAST_SUCCESSFUL_COMMIT = ${{env.NX_BASE}} >> $GITHUB_ENV
+            echo LAST_SUCCESSFUL_COMMIT = '0f4b5af4f876d836b969ca5526b4c4675eec9d5c' >> $GITHUB_ENV
             echo "last successful commit :${{env.NX_BASE}}"
             echo "Last successful run has the latest commit-id of: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
             echo "SF_ORG_API_VERSION :${{env.SF_ORG_API_VERSION}}"
-      - if: ${{steps.last_successful_commit.outputs.base == ''}}
+
+      - if: ${{env.LAST_SUCCESSFUL_COMMIT == ''}}
         run: |
             echo "Unable to find a successful workflow run"
           
       # Install Git Delta
       - name: 'Install Git Delta'
-        if: ${{steps.last_successful_commit.outputs.base != ''}}
+        if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
         run: echo y | sf plugins install sfdx-git-delta
 
       # Pickup delta change only. The delta output is kept in a variable env.PACKAGEXML_FILE 
       - name: 'Compare and pickup delta change only'
-        if: ${{steps.last_successful_commit.outputs.base != ''}}
+        if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
         shell: bash
-        run: sf sgd source delta --to "HEAD" --from ${{steps.last_successful_commit.outputs.base}} --generate-delta --output package
+        #run: sf sgd source delta --to "HEAD" --from '0f4b5af4f876d836b969ca5526b4c4675eec9d5c'
+        run: sf sgd source delta --to "HEAD" --from ${{env.LAST_SUCCESSFUL_COMMIT}} --generate-delta --output package
 
       # # print out package.xml file
       # - name: 'Display destructiveChanges.xml in Summary'
@@ -218,7 +224,7 @@ jobs:
       #     echo '## desctructiveChanges.xml' >> $GITHUB_STEP_SUMMARY
 
       - name: Upload delta output as artifacts
-        if: ${{steps.last_successful_commit.outputs.base != ''}}
+        if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
         uses: actions/upload-artifact@v3
         with:
           name: desctructiveChanges.zip    # Zip Filename that will be created
@@ -227,7 +233,7 @@ jobs:
 
       # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
       - name: 'Get Full Package XML if no Delta found'
-        if: ${{steps.last_successful_commit.outputs.base == ''}}
+        if: ${{env.LAST_SUCCESSFUL_COMMIT == ''}}
         run: |
           echo "PACKAGEXML_FILE=${{env.FULL_PACKAGEXML_FILE}}" >> $GITHUB_ENV
           echo 'Last successful run was NOT found. Full deployment done instead.' >> $GITHUB_STEP_SUMMARY
@@ -978,16 +984,16 @@ jobs:
             fi
 
       - name: 'Output Change Log'
-        if: ${{steps.last_successful_commit.outputs.base != ''}}
+        if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
         run: |
-          git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{steps.last_successful_commit.outputs.base}}... > ./CHANGE_LOG.txt
+          git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{env.LAST_SUCCESSFUL_COMMIT}}... > ./CHANGE_LOG.txt
           echo "Delta Change Log"
           cat ./CHANGE_LOG.txt
           echo '## Delta Change Log' >> $GITHUB_STEP_SUMMARY
           cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
-      - if: ${{steps.last_successful_commit.outputs.base == ''}}
+      - if: ${{env.LAST_SUCCESSFUL_COMMIT == ''}}
         run: |
           echo "Change Log"
           echo '## Change Log' >> $GITHUB_STEP_SUMMARY
@@ -1013,7 +1019,7 @@ jobs:
       #         echo "deploy-result.json not found" >> $GITHUB_STEP_SUMMARY
       #     fi
       - name: Upload deployment result as an artefact
-        if: ${{steps.last_successful_commit.outputs.base != ''}}
+        if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
         uses: actions/upload-artifact@v3
         with:
           name: deployment-result.zip
