@@ -1,0 +1,96 @@
+<!-- BEGIN coverageChart -->
+<h2>Apex Test Coverage</h2>
+
+<div id="myDiv" style="width: 100%; height: {{graphHeight}}px;"></div>
+
+<script>
+    const layout = {
+        height : {{graphHeight}},
+        hovermode : "closest",
+        barmode : "overlay",
+        margin : {
+            pad : 1
+        },
+        showlegend : true,
+        legend : {
+            x : 0,
+            y : 100
+        },
+        xaxis : {
+            automargin: true
+        },
+        yaxis : {
+            autotick : false,
+            showticklabels : true,
+            automargin: true
+        }
+    };
+
+    const requiredCoverage = {{{requiredCoverage}}};
+    const systemRequiredCoverage = {{{systemRequiredCoverage}}};
+    const axisLabels = {{{axisLabels}}};
+    const axisValues = {{{axisValues}}};
+
+    const data = [
+        //Add code coverage data
+        {
+            name: "Code Coverage %",
+            x : axisValues,
+            y : axisLabels,
+            type : "bar",
+            orientation : "h",
+            showlegend : false
+        },
+
+        //Add system required coverage level
+        {
+            name : "Salesforce Required Coverage Level",
+            x : systemRequiredCoverage,
+            y : axisLabels,
+            type : "scatter",
+            mode : "lines",
+            showlegend : true,
+            marker : {
+                color : "red",
+                width : 3
+            }
+        }
+    ];
+
+    if(!!requiredCoverage && !!requiredCoverage.length) {
+        //Add the required coverage level (if present)
+        data.push({
+            name : "{{requiredCoverageLabel}}",
+            x : requiredCoverage,
+            y : axisLabels,
+            type : "scatter",
+            mode : "lines",
+            showlegend : true,
+            marker : {
+                color : "green",
+                width : 3
+            }
+        });
+    }
+
+    //There is currently a bug where padding is added
+    //to the top and bottom of the chart (equaling 5%
+    //of the y-axis length.
+    //
+    //https://github.com/plotly/plotly.js/issues/4583
+    //https://github.com/plotly/plotly.js/issues/1876
+    //
+    //As of 2020-06-29 a fix is still (possibly) in
+    //progress.
+
+    Plotly.newPlot(
+        "myDiv",
+        data,
+        layout,
+        {
+            displaylogo : false,
+            responsive: true
+        }
+    );
+</script>
+<!-- END coverageChart -->

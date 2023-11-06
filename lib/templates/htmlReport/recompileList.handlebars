@@ -1,0 +1,27 @@
+<!-- BEGIN seeAllDataList -->
+<h2>Classes/Triggers need to be re-compiled for adequate testing and coverage</h2>
+{{#unless this.length}}
+<h3 class="success">
+    No classes or triggers found to require recompilation
+</h3>
+{{/unless}}
+
+{{#if this.length}}
+
+<h3 class="error">
+    {{this.length}} classes/triggers need to be re-compiled
+    for adequate testing and coverage
+</h3>
+
+<ul>
+    {{#this}}
+    <li>
+        <code>
+            {{name}}
+        </code>
+    </li>
+    {{/this}}
+</ul>
+
+{{/if}}
+<!-- END seeAllDataList -->

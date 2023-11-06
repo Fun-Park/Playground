@@ -1,0 +1,26 @@
+<!-- BEGIN seeAllDataList -->
+<h2>Test Classes using the <code>@SeeAllData</code> annotation</h2>
+{{#unless this.length}}
+<h3 class="success">
+    No tests are using <code>@SeeAllData</code>
+</h3>
+{{/unless}}
+
+{{#if this.length}}
+
+<h3 class="error">
+    {{this.length}} test(s) are using <code>@SeeAllData</code>
+</h3>
+
+<ul>
+    {{#this}}
+    <li>
+        <code>
+            {{this.name}}
+        </code>
+    </li>
+    {{/this}}
+</ul>
+
+{{/if}}
+<!-- END seeAllDataList -->

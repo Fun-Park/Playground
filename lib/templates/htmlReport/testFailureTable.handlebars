@@ -1,0 +1,64 @@
+<!-- BEGIN testFailureTable -->
+<h2>Test Failures</h2>
+
+{{#unless this.length}}
+    <h3 class="success">
+        No test failures
+    </h3>
+{{/unless}}
+
+{{#if this.length}}
+    <h3 class="error">
+        {{this.length}} test failure(s)
+    </h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Test Class Name
+                </th>
+                <th>
+                    Test Method Name
+                </th>
+                <th>
+                    Result
+                </th>
+                <th>
+                    Error Message &amp; Stack
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#this}}
+            {{#failures}}
+                <tr>
+                    <td>
+                        <code>
+                            {{../name}}
+                        </code>
+                    </td>
+                    <td>
+                        <code>
+                          {{methodName}}
+                        </code>
+                    </td>
+                    <td>
+                        {{outcome}}
+                    </td>
+                    <td>
+                        <code>
+                            {{message}}
+                        </code>
+                        <br/>
+                        <code>
+                            {{stackTrace}}
+                        </code>
+                    </td>
+                </tr>
+            {{/failures}}
+        {{/this}}
+        </tbody>
+    </table>
+{{/if}}
+<!-- END testFailureTable -->
