@@ -1,0 +1,94 @@
+<!-- Dependent Picklist Set - List View -->
+<template>
+
+    <lightning-spinner if:true={loading}>
+    </lightning-spinner>
+
+    <div class="lwcOverride">
+
+        <template if:true={hasInit}>
+
+            <div class="slds-box slds-box_border slds-color__background_gray-2 slds-has-bottom-magnet borderBottomNone">
+                <div class="slds-grid slds-grid_align-space slds-grid_vertical-align-end slds-p-horizontal_x-small slds-p-bottom_x-small">
+                    <div class="slds-grow">
+                        <lightning-combobox if:true={availableTypes}
+                                            label="Picklist Type"
+                                            onchange={handleTypeChange}
+                                            options={availableTypes}
+                                            value={type}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-grow">
+                    </div>
+                    <div>
+                        <lightning-combobox label="Result Size"
+                                            onchange={handleLimitChange}
+                                            options={optionsLimits}
+                                            value={selectedLimit}
+                        ></lightning-combobox>
+                    </div>
+                    <div if:true={columns}>
+                        <lightning-button icon-name="utility:filterList"
+                                          label="Filters"
+                                          onclick={handleFilterButtonClick}
+                                          variant="border-filled">
+                        </lightning-button>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-box slds-box_border slds-color__background_gray-2 slds-has-top-magnet slds-has-bottom-magnet"
+                 if:true={records}>
+                <div class="slds-p-vertical_xx-small slds-p-horizontal_small slds-text-body_small">
+                    Displaying&#32;
+                    <lightning-formatted-number
+                            maximum-fraction-digits="0"
+                            value={records.length}>
+                    </lightning-formatted-number>
+                    &#32;of&#32;
+                    <lightning-formatted-number
+                            maximum-fraction-digits="0"
+                            value={totalResults}>
+                    </lightning-formatted-number>
+                    &#32;records.
+                </div>
+            </div>
+            <template if:true={columns}>
+                <div class="dataTableOuter">
+                    <c-custom-datatable columns={columns}
+                                        data={records}
+                                        data-id="listView"
+                                        key-field="Id"
+                                        onheaderaction={handleHeaderActions}
+                                        onrowaction={handleRowActions}>
+                    </c-custom-datatable>
+                </div>
+                <div class="slds-box slds-box_border slds-color__background_gray-1 slds-has-top-magnet slds-has-bottom-magnet"
+                     if:false={records.length}>
+                    <div class="slds-p-horizontal_medium slds-p-vertical_small">
+                        <em>No results? Try adjusting your filters.</em>
+                    </div>
+                </div>
+            </template>
+
+
+        </template>
+
+        <!-- BEGIN: Bulk Update Modal -->
+        <c-dependent-picklist-set-list-view-bulk-update-modal data-id="bulkUpdateModal"
+                                                              onerror={hideLoader}
+                                                              onrequest={showLoader}
+                                                              onsave={handleBulkUpdateSave}>
+        </c-dependent-picklist-set-list-view-bulk-update-modal>
+        <!-- END: Bulk Update Modal -->
+
+        <!-- BEGIN: Filter Modal -->
+        <c-dependent-picklist-set-list-view-filter-modal data-id="filterModal"
+                                                         filters={filters}
+                                                         onclear={handleClearFilters}
+                                                         onsave={handleSaveFilters}>
+        </c-dependent-picklist-set-list-view-filter-modal>
+        <!-- END: Filter Modal -->
+
+    </div>
+
+</template>

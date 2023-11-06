@@ -1,0 +1,13 @@
+@import "c/myqbcc_styles";
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.filterAccordion {
+    --sds-c-accordion-heading-font-size: 0.9rem;
+}
+
+.borderBottomNone {
+    border-bottom: 0;
+}
