@@ -27,7 +27,6 @@
                 <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -50,36 +49,20 @@
                 <identifier>force_relatedListContainer</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
-        <name>relatedTabContent</name>
+        <name>Facet-6d8cfd8c-9c8c-4491-9f38-63622832cf68</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
                 <componentName>force:detailPanel</componentName>
-                <identifier>force_detailPanel</identifier>
+                <identifier>force_detailPanel2</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
-        <name>detailTabContent</name>
+        <name>Facet-13abfe43-6224-4c2f-a7f7-e5b9356ddeae</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>relatedTabContent</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Standard.Tab.relatedLists</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>relatedListsTab</identifier>
-            </componentInstance>
-        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
@@ -88,18 +71,31 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>detailTabContent</value>
+                    <value>Facet-6d8cfd8c-9c8c-4491-9f38-63622832cf68</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Standard.Tab.relatedLists</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-13abfe43-6224-4c2f-a7f7-e5b9356ddeae</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>detailTab</identifier>
+                <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
-        <name>maintabs</name>
+        <name>Facet-1f43fc17-ad08-4035-bba7-8f0ffd2e08c8</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -107,26 +103,23 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>tabs</name>
-                    <value>maintabs</value>
+                    <value>Facet-1f43fc17-ad08-4035-bba7-8f0ffd2e08c8</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
                 <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
-    <flexiPageRegions>
-        <mode>Replace</mode>
-        <name>sidebar</name>
-        <type>Region</type>
-    </flexiPageRegions>
     <masterLabel>Dependent Picklist Set Record Page</masterLabel>
-    <parentFlexiPage>flexipage__default_rec_L</parentFlexiPage>
     <sobjectType>Dependent_Picklist_Set__c</sobjectType>
     <template>
-        <name>flexipage:recordHomeTemplateDesktop</name>
+        <name>flexipage:recordHomeSimpleViewTemplate</name>
+        <properties>
+            <name>enablePageActionConfig</name>
+            <value>false</value>
+        </properties>
     </template>
     <type>RecordPage</type>
 </FlexiPage>
