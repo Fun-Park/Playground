@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Salesforce App",
   "main": "bin/main.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "build": "node bin/main.js",
     "split": "node bin/secret_handler.js",
@@ -13,8 +16,23 @@
     "type": "git",
     "url": "https://github.com/Fun-Park/Playground/tree"
   },
+  "keywords": [],
+  "author": "kl",
+  "license": "ISC",
   "dependencies": {
-    "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0"
-  }
+    "@actions/core": "^1.10.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "graceful-fs": "^4.2.10",
+    "handlebars": "^4.7.7",
+    "jsforce": "^1.10.1",
+    "replace-in-file": "^6.3.2",
+    "tunnel": "0.0.6",
+    "xml2js": "^0.4.23",
+    "dotenv": "^16.0.3"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
 }
