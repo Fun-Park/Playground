@@ -59,7 +59,7 @@ jobs:
     # if: ${{needs.UserValidation.outputs.UserValidation == 'true'}}     
     env:
       WORKFLOW_ID: 'delta_with_test.yml'
-      PACKAGEXML_FILE: './package/package.xml'
+      PACKAGEXML_FILE: './package/package/package.xml'
       FULL_PACKAGEXML_FILE: './package/full_package.xml'
       PACKAGEXML_PREPOSTBUILD_FILE: './package/pre_post_package.xml'
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
