@@ -168,10 +168,10 @@ jobs:
       # - name: Install Nodejs dependencies
       #   run: npm install
 
-      - name: 'setup node version'
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: 'package.json'
+      # - name: 'setup node version'
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version-file: 'package.json'
 
       - name: 'update_git_repo_url'
         uses: mingjun97/file-regex-replace@v1
