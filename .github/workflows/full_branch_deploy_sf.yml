@@ -153,13 +153,13 @@ jobs:
         run: npm install
 
       # Get last commit of successful workflow run
-      - name: 'Get last commit of successful workflow run'
-        uses: nrwl/nx-set-shas@v4
-        id: last_successful_commit
-        with:
-          main-branch-name: ${{env.BRANCH_NAME}}
-          workflow-id: ${{env.WORKFLOW_ID}}
-          error-on-no-successful-workflow: false        # set to true to error and exit if no successful workflow run is found
+      # - name: 'Get last commit of successful workflow run'
+      #   uses: nrwl/nx-set-shas@v4
+      #   id: last_successful_commit
+      #   with:
+      #     main-branch-name: ${{env.BRANCH_NAME}}
+      #     workflow-id: ${{env.WORKFLOW_ID}}
+      #     error-on-no-successful-workflow: false        # set to true to error and exit if no successful workflow run is found
 
       - name: Set SF_API_VERSION
         run: |
@@ -168,9 +168,8 @@ jobs:
           sf config set org-api-version=$sourceApiVersion.0 --global
           sf config list
 
-      - name: 'echo environment variables'
+      - name: 'echo API version'
         run: |
-            echo "last successful commit :${{env.NX_BASE}}"
             echo "SF_ORG_API_VERSION :${{env.SF_ORG_API_VERSION}}"
       
       - name: 'Output Change Log'
@@ -180,7 +179,6 @@ jobs:
           echo "Change Log"
           cat ./CHANGE_LOG.txt
           echo '## Change Log' >> $GITHUB_STEP_SUMMARY
-          echo "Last successful workflow run commit-id: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
           echo '```' >> $GITHUB_STEP_SUMMARY
           cat ./CHANGE_LOG.txt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
@@ -226,14 +224,14 @@ jobs:
           path: deployment-package.zip
           retention-days: 5
 
-      - name: check if zip file exist
-        run: |
-          if test -f ./deployment-package.zip;
-          then
-             echo "deployment-package.zip created." >> $GITHUB_STEP_SUMMARY
-          else
-             echo "deployment-package.zip not created !." >> $GITHUB_STEP_SUMMARY
-          fi
+      # - name: check if zip file exist
+      #   run: |
+      #     if test -f ./deployment-package.zip;
+      #     then
+      #        echo "deployment-package.zip created." >> $GITHUB_STEP_SUMMARY
+      #     else
+      #        echo "deployment-package.zip not created !." >> $GITHUB_STEP_SUMMARY
+      #     fi
 
       - name: Deploy without Tests
         id: deployWithoutTests
