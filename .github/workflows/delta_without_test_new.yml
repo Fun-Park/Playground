@@ -191,8 +191,6 @@ jobs:
           workflow-id: ${{env.WORKFLOW_ID}}
           error-on-no-successful-workflow: false   # setting to false will take ^HEAD (upon error) as last successful .
 
-      
-
       - name: 'echo last successful commit'
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         run: |
@@ -262,7 +260,10 @@ jobs:
             echo "LOGIN_URL=https://playground4-dev-ed.develop.my.salesforce.com/" >> $GITHUB_ENV
           fi
 
-
+        # testing Logout package.xml file
+      - name: 'Display package.xml file'
+        shell: bash
+        run: cat ${{env.PACKAGEXML_FILE}}
 
         #############################################################################
         ## Replace steps                                                           ##
