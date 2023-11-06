@@ -196,8 +196,8 @@ jobs:
       - name: 'echo last successful commit'
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         run: |
-            #echo LAST_SUCCESSFUL_COMMIT=${{env.NX_BASE}} >> $GITHUB_ENV
-            echo LAST_SUCCESSFUL_COMMIT=0f4b5af4f876d836b969ca5526b4c4675eec9d5c >> $GITHUB_ENV
+            echo LAST_SUCCESSFUL_COMMIT=${{env.NX_BASE}} >> $GITHUB_ENV
+            #echo LAST_SUCCESSFUL_COMMIT=0f4b5af4f876d836b969ca5526b4c4675eec9d5c >> $GITHUB_ENV
             echo "last successful commit :${{env.NX_BASE}}"
             echo "Last successful run has the latest commit-id of: ${{env.NX_BASE}}" >> $GITHUB_STEP_SUMMARY 
             echo "SF_ORG_API_VERSION :${{env.SF_ORG_API_VERSION}}"
