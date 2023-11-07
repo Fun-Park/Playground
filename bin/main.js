@@ -148,7 +148,7 @@ const saveTestClassNames2File2 = async (dependencedClassNamesArray,csvFilePath,d
                 siblingTestClassArray.push(className);
             }
         }
-        outputContent = ""+  siblingTestClassArray.join(",");
+        outputContent = ""+  siblingTestClassArray.join(" ");
         console.log('outputCOntent1 = ' +outputContent.length );
     }else{
         outputContent = deployOption;
