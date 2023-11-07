@@ -61,7 +61,7 @@ jobs:
     # needs: UserValidation
     # if: ${{needs.UserValidation.outputs.UserValidation == 'true'}}     
     env:
-      #WORKFLOW_ID: 'delta_with_test_new.yml'
+      WORKFLOW_ID: 'delta_with_test_new.yml'
       PACKAGEXML_FILE: './package/package/package.xml'
       DESTRUCTIVE_CHANGES_FILE: './package/destructiveChanges/destructiveChanges.xml'
       FULL_PACKAGEXML_FILE: './package/full_package.xml'
@@ -198,7 +198,7 @@ jobs:
         id: last_successful_commit
         with:
           main-branch-name: ${{env.BRANCH_NAME}}
-         # workflow-id: ${{env.WORKFLOW_ID}}
+          workflow-id: ${{env.WORKFLOW_ID}}
           error-on-no-successful-workflow: false   # setting to false will take ^HEAD (upon error) as last successful .
 
       - name: Set SF_API_VERSION
