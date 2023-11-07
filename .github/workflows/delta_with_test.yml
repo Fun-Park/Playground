@@ -60,6 +60,7 @@ jobs:
     env:
       WORKFLOW_ID: 'delta_with_test.yml'
       PACKAGEXML_FILE: './package/package/package.xml'
+      DESTRUCTIVE_CHANGES_FILE: './package/destructiveChanges/destructiveChanges.xml'
       FULL_PACKAGEXML_FILE: './package/full_package.xml'
       PACKAGEXML_PREPOSTBUILD_FILE: './package/pre_post_package.xml'
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1011,7 +1012,7 @@ jobs:
 
       - name: Test for DestructiveChanges and Deployment changes
         run: |
-          if grep -q "<members>" destructiveChanges/destructiveChanges.xml; then
+          if grep -q "<members>" ${{env.DESTRUCTIVE_CHANGES_FILE}}; then
             echo "There are Destructive Changes"
             echo "ARCHIVE_DESTRUCTIVE_CHANGES=true" >> $GITHUB_ENV 
           else 
