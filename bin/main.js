@@ -179,7 +179,7 @@ const getApexClassNames = async (packageXMLFilePath) => {
     var parser = new xml2js.Parser();
     var xml = fs.readFileSync(packageXMLFilePath, "utf8");
 
-    addInjectMetadataToPackageXML(packageXMLFilePath);
+    // addInjectMetadataToPackageXML(packageXMLFilePath);
 
     // read delta XML File to get list of change apex file names
     parser.parseString(xml, function(err,result){

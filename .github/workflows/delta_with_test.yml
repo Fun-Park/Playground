@@ -292,10 +292,10 @@ jobs:
             echo "LOGIN_URL=https://playground4-dev-ed.develop.my.salesforce.com/" >> $GITHUB_ENV
           fi
 
-        # testing Logout package.xml file
-      - name: 'Display package.xml file'
-        shell: bash
-        run: cat ${{env.PACKAGEXML_FILE}}
+      #   # testing Logout package.xml file
+      # - name: 'Display package.xml file'
+      #   shell: bash
+      #   run: cat ${{env.PACKAGEXML_FILE}}
 
       - name: Check for Apex Class or Trigger in Package.xml
         run: |
@@ -328,6 +328,11 @@ jobs:
       - name: 'Logout testclass step output'
         shell: bash
         run: echo ${{steps.testclass.outputs.content}}
+
+      # testing Logout package.xml file
+      - name: 'Display package.xml file'
+        shell: bash
+        run: cat ${{env.PACKAGEXML_FILE}}
 
         #############################################################################
         ## Replace steps                                                           ##
