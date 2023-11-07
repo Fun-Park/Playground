@@ -190,6 +190,7 @@ jobs:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
           error-on-no-successful-workflow: false   # setting to false will take ^HEAD (upon error) as last successful .
+          working-directory: ${{env.SRC_DIR}}
 
       - name: 'echo last successful commit'
         if: ${{steps.last_successful_commit.outputs.base != ''}}

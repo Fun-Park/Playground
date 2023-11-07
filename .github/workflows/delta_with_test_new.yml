@@ -55,9 +55,6 @@ jobs:
   #         echo "User Validation Complete"
   generic-deploy-with-test:
     runs-on: ubuntu-latest
-    permissions:
-        contents: 'read'
-        actions: 'read'
     # needs: UserValidation
     # if: ${{needs.UserValidation.outputs.UserValidation == 'true'}}     
     env:
@@ -201,6 +198,7 @@ jobs:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
           error-on-no-successful-workflow: false   # setting to false will take ^HEAD (upon error) as last successful .
+          working-directory: ${{env.SRC_DIR}}          
 
       - name: Set SF_API_VERSION
         run: |

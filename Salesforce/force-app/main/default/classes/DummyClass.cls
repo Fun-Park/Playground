@@ -1,7 +1,7 @@
 public without sharing class DummyClass {
 
         public static Integer giveMeSeven(){
-                System.debug('seven');
+                System.debug('seven..');
                 return 7;
         }
 }
