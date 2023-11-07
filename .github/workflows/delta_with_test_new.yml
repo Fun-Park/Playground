@@ -196,6 +196,7 @@ jobs:
       - name: 'Get last commit of successful workflow run'
         uses: nrwl/nx-set-shas@v4
         id: last_successful_commit
+        continue-on-error: true
         with:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
