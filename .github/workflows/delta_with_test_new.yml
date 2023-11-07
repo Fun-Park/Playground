@@ -198,7 +198,8 @@ jobs:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
           error-on-no-successful-workflow: false   # setting to false will take ^HEAD (upon error) as last successful .
-          working-directory: ${{env.SRC_DIR}}          
+          working-directory: ${{env.SRC_DIR}}   
+          last-successful-event: workflow_dispatch       
 
       - name: Set SF_API_VERSION
         run: |
