@@ -1,6 +1,6 @@
 public without sharing class DummyClass {
 
-        public static final Integer giveMeSeven(){
+        public static Integer giveMeSeven(){
                 return 7;
         }
 }
