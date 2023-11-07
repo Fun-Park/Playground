@@ -55,6 +55,9 @@ jobs:
   #         echo "User Validation Complete"
   generic-deploy-with-test:
     runs-on: ubuntu-latest
+    permissions:
+        contents: 'read'
+        actions: 'read'
     # needs: UserValidation
     # if: ${{needs.UserValidation.outputs.UserValidation == 'true'}}     
     env:
