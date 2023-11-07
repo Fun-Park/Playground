@@ -199,7 +199,7 @@ jobs:
         with:
           main-branch-name: ${{env.BRANCH_NAME}}
           workflow-id: ${{env.WORKFLOW_ID}}
-          error-on-no-successful-workflow: false   # setting to false will take ^HEAD (upon error) as last successful .
+          error-on-no-successful-workflow: true   # setting to false will take ^HEAD (upon error) as last successful .
 
       - name: Set SF_API_VERSION
         run: |
@@ -244,13 +244,13 @@ jobs:
         run: sf sgd source delta --to "HEAD" --from ${{env.LAST_SUCCESSFUL_COMMIT}} --generate-delta --output package
 
 
-      - name: Upload delta output as artifacts
-        if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
-        uses: actions/upload-artifact@v3
-        with:
-          name: desctructiveChanges.zip    # Zip Filename that will be created
-          path: package/destructiveChanges/destructiveChanges.xml
-          retention-days: 5
+#       - name: Upload delta output as artifacts
+#         if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: desctructiveChanges.zip    # Zip Filename that will be created
+#           path: package/destructiveChanges/destructiveChanges.xml
+#           retention-days: 5
 
       # If no delta found, then overwrite the output with env.FULL_PACKAGEXML_FILE
       - name: 'Get Full Package XML if no Delta found'
@@ -328,7 +328,7 @@ jobs:
           path: ${{env.TESTSCRIPT_OUTPUT_FILENAME}}
 
       #  testing Logout testclass step output file
-      - name: 'Logout testclass step output'
+      - name: 'Echo testclass step output'
         shell: bash
         run: echo ${{steps.testclass.outputs.content}}
 
@@ -1040,20 +1040,16 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: destructiveChanges    # Zip Filename that will be created
-          path: destructiveChanges
+          path: package/destructiveChanges/destructiveChanges.xml
           retention-days: 5
 
       #Create zip of folder for uploading as artifact to increase performance due to large number of files
       - name: Zip artifact for deployment
-        if: ${{github.event.inputs.DEBUG == 'true' ||
-          env.BRANCH_NAME == 'master' ||
-          env.BRANCH_NAME == 'STAGING'}}
+        if: ${{github.event.inputs.DEBUG == 'true' || env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'STAGING'}}
         run: zip deployment-package.zip ${{env.PACKAGEXML_FILE}} ${{env.SRC_DIR}} -r
 
       - name: Upload artifact for deployment job
-        if: ${{github.event.inputs.DEBUG == 'true' ||
-          env.BRANCH_NAME == 'master' ||
-          env.BRANCH_NAME == 'STAGING'}}
+        if: ${{github.event.inputs.DEBUG == 'true' || env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'STAGING'}}
         uses: actions/upload-artifact@v3
         with:
           name: deployment-package    # Zip Filename that will be created
