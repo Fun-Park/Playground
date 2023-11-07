@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessHoursSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <businessHours>
+        <active>true</active>
+        <default>false</default>
+        <fridayEndTime>00:00:00.000Z</fridayEndTime>
+        <fridayStartTime>00:00:00.000Z</fridayStartTime>
+        <mondayEndTime>00:00:00.000Z</mondayEndTime>
+        <mondayStartTime>00:00:00.000Z</mondayStartTime>
+        <name>Default</name>
+        <saturdayEndTime>00:00:00.000Z</saturdayEndTime>
+        <saturdayStartTime>00:00:00.000Z</saturdayStartTime>
+        <sundayEndTime>00:00:00.000Z</sundayEndTime>
+        <sundayStartTime>00:00:00.000Z</sundayStartTime>
+        <thursdayEndTime>00:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>00:00:00.000Z</thursdayStartTime>
+        <timeZoneId>Australia/Brisbane</timeZoneId>
+        <tuesdayEndTime>00:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>00:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>00:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>00:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <businessHours>
+        <active>true</active>
+        <default>false</default>
+        <fridayEndTime>17:00:00.000Z</fridayEndTime>
+        <fridayStartTime>08:00:00.000Z</fridayStartTime>
+        <mondayEndTime>17:00:00.000Z</mondayEndTime>
+        <mondayStartTime>08:00:00.000Z</mondayStartTime>
+        <name>QBCC BCIPA Business Day Schedule</name>
+        <thursdayEndTime>17:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>08:00:00.000Z</thursdayStartTime>
+        <timeZoneId>Australia/Brisbane</timeZoneId>
+        <tuesdayEndTime>17:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>08:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>17:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>08:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <businessHours>
+        <active>true</active>
+        <default>false</default>
+        <fridayEndTime>17:00:00.000Z</fridayEndTime>
+        <fridayStartTime>08:00:00.000Z</fridayStartTime>
+        <mondayEndTime>17:00:00.000Z</mondayEndTime>
+        <mondayStartTime>08:00:00.000Z</mondayStartTime>
+        <name>QBCC Business Hours</name>
+        <thursdayEndTime>17:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>08:00:00.000Z</thursdayStartTime>
+        <timeZoneId>Australia/Brisbane</timeZoneId>
+        <tuesdayEndTime>17:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>08:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>17:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>08:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <businessHours>
+        <active>true</active>
+        <default>true</default>
+        <fridayEndTime>17:00:00.000Z</fridayEndTime>
+        <fridayStartTime>08:00:00.000Z</fridayStartTime>
+        <mondayEndTime>17:00:00.000Z</mondayEndTime>
+        <mondayStartTime>08:00:00.000Z</mondayStartTime>
+        <name>QBCC Std Business Day Schedule</name>
+        <thursdayEndTime>17:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>08:00:00.000Z</thursdayStartTime>
+        <timeZoneId>Australia/Brisbane</timeZoneId>
+        <tuesdayEndTime>17:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>08:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>17:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>08:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <businessHours>
+        <active>true</active>
+        <default>false</default>
+        <fridayEndTime>00:00:00.000Z</fridayEndTime>
+        <fridayStartTime>00:00:00.000Z</fridayStartTime>
+        <mondayEndTime>00:00:00.000Z</mondayEndTime>
+        <mondayStartTime>00:00:00.000Z</mondayStartTime>
+        <name>QBCC Std Calendar Day Schedule</name>
+        <saturdayEndTime>00:00:00.000Z</saturdayEndTime>
+        <saturdayStartTime>00:00:00.000Z</saturdayStartTime>
+        <sundayEndTime>00:00:00.000Z</sundayEndTime>
+        <sundayStartTime>00:00:00.000Z</sundayStartTime>
+        <thursdayEndTime>00:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>00:00:00.000Z</thursdayStartTime>
+        <timeZoneId>Australia/Brisbane</timeZoneId>
+        <tuesdayEndTime>00:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>00:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>00:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>00:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <businessHours>
+        <active>true</active>
+        <default>false</default>
+        <fridayEndTime>00:00:00.000Z</fridayEndTime>
+        <fridayStartTime>00:00:00.000Z</fridayStartTime>
+        <mondayEndTime>00:00:00.000Z</mondayEndTime>
+        <mondayStartTime>00:00:00.000Z</mondayStartTime>
+        <name>RTI Business Hours</name>
+        <thursdayEndTime>00:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>00:00:00.000Z</thursdayStartTime>
+        <timeZoneId>Australia/Brisbane</timeZoneId>
+        <tuesdayEndTime>00:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>00:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>00:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>00:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <holidays>
+        <activityDate>2015-12-25</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2015.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2015-12-28</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2015.12.28 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-01-01</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-01-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-03-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.03.25 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-03-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.03.26 Easter Saturday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-03-28</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.03.28 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-04-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.04.25 Anzac Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-05-02</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.05.02 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-08-10</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.08.10 Royal Qld Show</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-10-03</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.10.03 Queen&apos;s Birthday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-12-26</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2016-12-27</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2016.12.27 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-01-01</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-01-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-01-02</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.01.02 New Year&apos;s Holiday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-01-02</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.01.02 New Year&apos;s Holiday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-01-26</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-01-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-14</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.14 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-14</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.14 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-15</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.15 Easter Saturday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-15</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.15 Easter Saturday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-16</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.16 Easter Sunday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-16</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.16 Easter Sunday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-17</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.17 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-17</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.17 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-25</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.25 Anzac day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-04-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.04.25 Anzac day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-05-11</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.05.01 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-05-11</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.05.01 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-10-02</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.10.02 Queens Bitrhday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-10-02</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.10.02 Queens Bitrhday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-12-25</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-12-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-12-26</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2017-12-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2017.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-01-01</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-01-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-01-26</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-01-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-03-30</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.03.30 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-03-30</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.03.30 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-03-31</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.03.31 Easter Saturday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-03-31</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.03.31 Easter Saturday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-04-01</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.04.01 Easter Sunday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-04-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.04.01 Easter Sunday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-04-02</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.04.02 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-04-02</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.04.02 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-04-25</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.04.25 Anzac day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-04-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.04.25 Anzac day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-05-07</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.05.07 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-05-07</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.05.07 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-10-01</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.10.01 Queens Bitrhday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-10-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.10.01 Queens Bitrhday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-12-25</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-12-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-12-26</activityDate>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2018-12-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2018.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-01-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-01-28</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-04-19</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.04.19 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-04-21</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.04.21 Easter Sunday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-04-22</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.04.22 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-04-25</activityDate>
+        <isRecurring>false</isRecurring>
+        <name>2019.04.25 Anzac Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-05-06</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.05.06 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-08-14</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.08.14 Royal Qld Show</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-10-07</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.10.07 Queen&apos;s Birthday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-12-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2019-12-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2019.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-01-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-01-27</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-04-10</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.04.10 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-04-11</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.04.11 Easter Saturday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-04-12</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.04.12 Easter Sunday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-04-13</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.04.13 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-04-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.04.25 Anzac Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-05-04</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.05.04 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-08-12</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.08.12 Royal Qld Show</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-10-05</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.10.05 Queen&apos;s Birthday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-12-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2020-12-28</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2020.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-01-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-01-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-04-02</activityDate>
+        <isRecurring>false</isRecurring>
+        <name>2021.04.02 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-04-05</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.04.05 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-04-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.04.26 Anzac Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-05-03</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.05.03 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-10-29</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.10.29 Royal Qld Show</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-10-04</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.10.04 Queen&apos;s Birthday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-12-27</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.12.27 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2021-12-28</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2021.12.28 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-01-03</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.01.03 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-01-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-04-15</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.04.15 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-04-18</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.04.18 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-04-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.04.25 Anzac Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-05-02</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.05.02 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-09-22</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.09.22 National Day of Mourning for Her Majesty The Queen</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-10-03</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.10.03 Queen&apos;s Birthday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-12-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2022-12-27</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2022.12.27 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-01-02</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.01.02 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-01-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-04-10</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.04.10 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-04-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.04.25 Anzac Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-04-07</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.04.7 Good Friday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-05-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.05.01 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-08-16</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.08.16 Royal Qld Show</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-10-02</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.10.02 Queen&apos;s Birthday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-12-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-12-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2023.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-01-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.01.01 New Year&apos;s Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-01-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.01.26 Australia Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-03-29</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.03.29 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-04-01</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.04.01 Easter Monday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-04-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.04.25 Anzac Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-05-06</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.05.06 Labour Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-08-14</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.08.14 Royal Qld Show</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-10-07</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.10.07 Queen&apos;s Birthday</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-12-25</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.12.25 Christmas Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-12-26</activityDate>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <businessHours>QBCC Std Business Day Schedule</businessHours>
+        <businessHours>RTI Business Hours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>2024.12.26 Boxing Day</name>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 01</name>
+        <recurrenceDayOfMonth>22</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-22</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 02</name>
+        <recurrenceDayOfMonth>23</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-23</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 03</name>
+        <recurrenceDayOfMonth>24</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-24</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 04</name>
+        <recurrenceDayOfMonth>25</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-25</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 05</name>
+        <recurrenceDayOfMonth>26</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-26</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 06</name>
+        <recurrenceDayOfMonth>27</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-27</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 07</name>
+        <recurrenceDayOfMonth>28</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-28</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 08</name>
+        <recurrenceDayOfMonth>29</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-29</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 09</name>
+        <recurrenceDayOfMonth>30</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-30</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 10</name>
+        <recurrenceDayOfMonth>31</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2015-12-31</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 11</name>
+        <recurrenceDayOfMonth>1</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-01</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 12</name>
+        <recurrenceDayOfMonth>2</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-02</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 13</name>
+        <recurrenceDayOfMonth>3</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-03</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 14</name>
+        <recurrenceDayOfMonth>4</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-04</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 15</name>
+        <recurrenceDayOfMonth>5</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-05</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 16</name>
+        <recurrenceDayOfMonth>6</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-06</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 17</name>
+        <recurrenceDayOfMonth>7</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-07</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 18</name>
+        <recurrenceDayOfMonth>8</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-08</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 19</name>
+        <recurrenceDayOfMonth>9</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-09</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>QBCC BCIPA Business Day Schedule</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>BCIPA Act - Non Business Day 20</name>
+        <recurrenceDayOfMonth>10</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2016-01-10</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+</BusinessHoursSettings>
