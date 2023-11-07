@@ -209,7 +209,7 @@ jobs:
         if: ${{steps.last_successful_commit.outputs.base != ''}}
         run: |
             echo LAST_SUCCESSFUL_COMMIT=${{env.NX_BASE}} >> $GITHUB_ENV
-            #echo LAST_SUCCESSFUL_COMMIT=510ff2072b58b01081a3d08873cd087be97ec311 >> $GITHUB_ENV
+            #echo LAST_SUCCESSFUL_COMMIT=510ff2072b58b01081a3d08873cd087be97ec311 >> $GITHUB_ENVtest for
             echo "last successful commit :${{env.LAST_SUCCESSFUL_COMMIT}}"
             echo "Last successful run has the latest commit-id of: ${{env.LAST_SUCCESSFUL_COMMIT}}" >> $GITHUB_STEP_SUMMARY 
             echo "SF_ORG_API_VERSION :${{env.SF_ORG_API_VERSION}}"
@@ -221,7 +221,7 @@ jobs:
       # - name: 'Output Change Log'
       #   id: 'OutputChangeLog'
       #   run: |
-      #     git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{steps.last_successful_commit.outputs.commit_hash}}... > ./CHANGE_LOG.txt
+      #     git log --pretty='%n%s - %an' --no-merges --name-status --branches=${{env.BRANCH_NAME}} ${{env.LAST_SUCCESSFUL_COMMIT}}... > ./CHANGE_LOG.txt
       #     echo "Change Log"
       #     cat ./CHANGE_LOG.txt
       #     echo '## Change Log' >> $GITHUB_STEP_SUMMARY
@@ -1086,7 +1086,7 @@ jobs:
         if: >-
           ${{(env.ARCHIVE_DESTRUCTIVE_CHANGES == 'false') && 
           (env.DEPLOY_CHANGES == 'true') && (
-          (steps.last_successful_commit.outputs.commit_hash == '') || 
+          (env.LAST_SUCCESSFUL_COMMIT == '') || 
           (steps.testclass.outputs.content == ''))}}
         shell: bash
         env:
@@ -1099,7 +1099,7 @@ jobs:
         if: >-
           ${{(env.ARCHIVE_DESTRUCTIVE_CHANGES == 'true') && 
           (env.DEPLOY_CHANGES == 'true') && (
-          (steps.last_successful_commit.outputs.commit_hash == '') || 
+          (env.LAST_SUCCESSFUL_COMMIT == '') || 
           (steps.testclass.outputs.content == ''))}}
         shell: bash
         env:
