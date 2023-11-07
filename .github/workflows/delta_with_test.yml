@@ -1080,7 +1080,7 @@ jobs:
           SFDX_DISABLE_DNS_CHECK: true
         run: >-
           sf project deploy start -x ${{env.PACKAGEXML_FILE}} --postdestructivechanges destructiveChanges/destructiveChanges.xml 
-          -o ${{env.SF_USERNAME}} -l RunSpecifiedTests -r ${{steps.testclass.outputs.content}}  -w 10000 --checkonly --verbose > deploy-result.json        
+          -o ${{env.SF_USERNAME}} -l RunSpecifiedTests -r --tests ${{steps.testclass.outputs.content}}  -w 10000 --checkonly --verbose > deploy-result.json        
 
       - name: Deploy all local test classes no destructiveChanges
         if: >-
@@ -1119,7 +1119,7 @@ jobs:
           SFDX_DISABLE_DNS_CHECK: true
         run: >-
           sf project deploy start -x ${{env.PACKAGEXML_FILE}} 
-          -l RunSpecifiedTests -r ${{steps.testclass.outputs.content}} -o ${{env.SF_USERNAME}} -w 10000 --verbose > deploy-result.json
+          -l RunSpecifiedTests -r --tests ${{steps.testclass.outputs.content}} -o ${{env.SF_USERNAME}} -w 10000 --verbose > deploy-result.json
   
       - name: Upload deployment result as an artefact
         if: ${{env.LAST_SUCCESSFUL_COMMIT != ''}}
